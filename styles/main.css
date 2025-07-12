@@ -83,23 +83,21 @@ h6 {
 }
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  color: white;
-  background: black;
   font-family: var(--font-body);
-  background-color: #0a0a0a;
   color: #e5e5e5;
-  padding: 2rem;
+  background-color: #0a0a0a;
 }
 
 #background {
   position: fixed;
   inset: 0;
   z-index: -1;
+  background-image: url("../assets/backgrounds/bg-default.svg");
   background-size: cover;
   background-position: center;
-  transition: background-color 0.6s, opacity 0.6s;
+  background-repeat: no-repeat;
+  background-color: #0a0a0a;
+  transition: background-color 0.6s, opacity 0.6s, background-image 0.6s ease;
 }
 
 h1,
@@ -108,11 +106,6 @@ h3 {
   font-family: var(--font-heading);
   margin-bottom: 0.5rem;
   line-height: 1.2;
-}
-
-section {
-  max-width: 768px;
-  margin: 4rem auto;
 }
 
 h1 {
@@ -127,8 +120,30 @@ h2 {
 
 p {
   font-size: 1rem;
-  max-width: 60ch;
-  margin: 0 auto 1rem auto;
+}
+
+main {
+  width: 824px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+section {
+  max-width: 768px;
+}
+
+#hero {
+  padding-top: 128px;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
@@ -142,22 +157,4 @@ p {
 }
 .card:hover {
   background-color: rgba(255, 255, 255, 0.05);
-}
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-#hero {
-  text-align: center;
-  padding-top: 4rem;
-}
-
-#projects,
-#skills {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }

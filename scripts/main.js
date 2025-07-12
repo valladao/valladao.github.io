@@ -15,7 +15,7 @@ cards.forEach((card) => {
         bg.style.backgroundColor = colorMap[id];
     });
     card.addEventListener("mouseleave", () => {
-        bg.style.backgroundImage = "";
-        bg.style.backgroundColor = "black";
+        bg.style.backgroundImage = "url(assets/backgrounds/bg-default.svg)";
+        bg.style.backgroundColor = "#0a0a0a";
     });
 });
