@@ -79,13 +79,15 @@ h6 {
 :root {
   --font-heading: "Audiowide", sans-serif;
   --font-body: "Inter", sans-serif;
-  --color-accent: #00ffe0;
+  --black: #0a0a0a;
+  --white: #e5e5e5;
+  --accent: #00ffe0;
 }
 
 body {
   font-family: var(--font-body);
-  color: #e5e5e5;
-  background-color: #0a0a0a;
+  color: var(--white);
+  background-color: var(--black);
 }
 
 #background {
@@ -96,7 +98,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #0a0a0a;
+  background-color: var(--black);
   transition: background-color 0.6s, opacity 0.6s, background-image 0.6s ease;
 }
 
@@ -114,13 +116,17 @@ h1 {
 
 h2 {
   font-size: 32px;
-  color: var(--color-accent);
+  color: var(--accent);
   margin-bottom: 24px;
 }
 
 p {
   font-size: 16px;
   margin-bottom: 16px;
+}
+
+a {
+  color: var(--accent);
 }
 
 main {
@@ -130,10 +136,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-}
-
-section {
-  max-width: 768px;
 }
 
 #hero {
@@ -154,20 +156,35 @@ section {
 
 .cards {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
 }
 
 .card {
-  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  margin: 16px;
+  padding: 24px;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.02);
-  border-radius: 12px;
-  border: 1px solid #333;
-  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--white);
   transition: background-color 0.3s ease;
+  height: 280px;
 }
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-content {
+  margin-bottom: 16px;
+}
+
+.card:last-child {
+  align-self: flex-start;
+}
+
 .card:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
