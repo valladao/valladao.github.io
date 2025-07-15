@@ -112,16 +112,18 @@ a {
 }
 
 main {
-  width: 912px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 32px;
+  width: 936px;
+  margin: 48px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 64px;
   backdrop-filter: blur(10px);
-  padding: 32px;
+  padding: 0 56px 56px;
   border: 1px solid var(--brand);
+}
+
+.footer {
+  height: 48px;
 }
 
 #hero {
