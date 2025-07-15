@@ -64,13 +64,6 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-/*
-  9. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
 
 /*
   GLOBAL CSS STYLES
@@ -81,6 +74,7 @@ h6 {
   --font-body: "Inter", sans-serif;
   --black: #0a0a0a;
   --white: #e5e5e5;
+  --brand: #038bff;
   --accent: #00ffe0;
 }
 
@@ -88,18 +82,6 @@ body {
   font-family: var(--font-body);
   color: var(--white);
   background-color: var(--black);
-}
-
-#background {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image: url("../assets/backgrounds/bg-default.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--black);
-  transition: background-color 0.6s, opacity 0.6s, background-image 0.6s ease;
 }
 
 h1,
@@ -130,16 +112,20 @@ a {
 }
 
 main {
-  width: 848px;
+  width: 912px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 32px;
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  backdrop-filter: blur(10px);
+  padding: 32px;
+  border: 1px solid var(--brand);
 }
 
 #hero {
-  padding-top: 128px;
+  padding-top: 64px;
 }
 
 .header {
@@ -181,10 +167,203 @@ main {
   margin-bottom: 16px;
 }
 
-.card:last-child {
-  align-self: flex-start;
-}
-
 .card:hover {
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+/*
+  BACKGROUND STYLES - EARTH
+*/
+
+html {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  background: radial-gradient(ellipse at bottom, #0c1116 0%, #090a0f 100%);
+}
+
+#horizon {
+  position: fixed;
+  width: 160%;
+  height: 70%;
+  border-radius: 100% / 100%;
+  background: var(--brand);
+  filter: blur(30px);
+  left: 50%;
+  bottom: -45%;
+  margin-left: -80%;
+}
+
+#horizon::before {
+  content: "";
+  position: absolute;
+  width: 81.25%;
+  height: 70%;
+  border-radius: 100% / 100%;
+  background: #51afff;
+  filter: blur(30px);
+  opacity: 0.6;
+  margin-left: 9.375%;
+}
+
+#horizon::after {
+  content: "";
+  position: absolute;
+  width: 32%;
+  height: 20%;
+  border-radius: 650px / 350px;
+  background: #b0daff;
+  filter: blur(30px);
+  opacity: 0.5;
+  margin-left: 34%;
+}
+
+.glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100% / 100%;
+  background: #215496;
+  filter: blur(200px);
+  opacity: 0.7;
+  top: -10%;
+}
+
+#earth {
+  position: fixed;
+  width: 200%;
+  height: 100%;
+  background: black;
+  border-radius: 100% / 100%;
+  left: 50%;
+  bottom: -75%;
+  margin-left: -100%;
+}
+
+#earth::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100% / 100%;
+  box-shadow: inset 0px 0px 62px 20px rgba(60, 105, 138, 0.85);
+}
+
+#earth::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100% / 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+/*
+  BACKGROUND STYLES - GRID
+*/
+
+.grid-container {
+  position: fixed;
+  --grid: 10rem;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  perspective: 100rem;
+  animation: rotate 100s linear infinite forwards;
+}
+
+.grid-container .plane {
+  --dir: 1;
+  width: 300%;
+  height: 150%;
+  min-height: 70rem;
+  position: absolute;
+  bottom: 0;
+  transform-style: preserve-3d;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotateX(85deg);
+}
+
+.grid-container .plane:last-child {
+  --dir: -1;
+  top: 0;
+  transform-origin: top center;
+  transform: translateX(-50%) rotateX(-85deg);
+}
+
+.grid-container .plane:last-child > *::after {
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 255) var(--grid),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.grid-container .plane > * {
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.grid-container .plane > *::before,
+.grid-container .plane > *::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.grid-container .plane > *::before {
+  background-image: repeating-linear-gradient(
+      to left,
+      #215496,
+      #215496 4px,
+      transparent 4px,
+      transparent var(--grid)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #215496,
+      #215496 4px,
+      transparent 4px,
+      transparent var(--grid)
+    );
+  animation: move 1s linear infinite forwards;
+}
+
+.grid-container .plane > *::after {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 255) var(--grid),
+    rgba(0, 0, 0, 0)
+  );
+  z-index: 1;
+  transform: translateZ(1px);
+}
+
+.grid-container .plane .glow {
+  filter: blur(1rem);
+  z-index: 1;
+  mix-blend-mode: plus-lighter;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(calc(var(--grid) * var(--dir)));
+  }
 }
