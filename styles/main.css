@@ -64,13 +64,6 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-/*
-  9. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
 
 /*
   GLOBAL CSS STYLES
@@ -174,10 +167,6 @@ main {
   margin-bottom: 16px;
 }
 
-.card:last-child {
-  align-self: flex-start;
-}
-
 .card:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
@@ -189,7 +178,6 @@ main {
 html {
   height: 100%;
   width: 100%;
-  font-family: "Lato", sans-serif;
   color: #fff;
   background: radial-gradient(ellipse at bottom, #0c1116 0%, #090a0f 100%);
 }
@@ -377,23 +365,5 @@ html {
 
   to {
     transform: translateY(calc(var(--grid) * var(--dir)));
-  }
-}
-
-@keyframes blink {
-  0% {
-    visibility: visible;
-  }
-
-  50% {
-    visibility: visible;
-  }
-
-  51% {
-    visibility: hidden;
-  }
-
-  100% {
-    visibility: hidden;
   }
 }
