@@ -108,8 +108,20 @@ p {
   margin-bottom: 16px;
 }
 
-a {
+a,
+.link {
   color: var(--accent);
+  display: block;
+  text-align: end;
+}
+
+.link a,
+.link span {
+  display: inline;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 main {
