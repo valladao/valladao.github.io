@@ -71,7 +71,7 @@ h6 {
 
 :root {
   --font-heading: "Audiowide", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-body: "Open Sans", sans-serif;
   --black: #0a0a0a;
   --white: #e5e5e5;
   --brand: #038bff;
@@ -100,12 +100,17 @@ h1 {
 h2 {
   font-size: 32px;
   color: var(--accent);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
 p {
-  font-size: 16px;
-  margin-bottom: 16px;
+  font-size: 18px;
+  margin-bottom: 24px;
 }
 
 a,
@@ -171,7 +176,7 @@ main {
   backdrop-filter: blur(10px);
   border: 1px solid var(--white);
   transition: background-color 0.3s ease;
-  height: 280px;
+  height: 304px;
 }
 
 .card-content {
