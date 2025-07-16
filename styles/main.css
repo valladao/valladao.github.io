@@ -228,7 +228,7 @@ main {
   position: fixed;
   width: 200%;
   height: 100%;
-  background: black;
+  background: var(--black);
   border-radius: 100% / 100%;
   left: 50%;
   bottom: -75%;
@@ -252,9 +252,9 @@ main {
   border-radius: 100% / 100%;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 1) 100%
+    rgba(10, 10, 10, 1) 0%,
+    rgba(10, 10, 10, 0) 50%,
+    rgba(10, 10, 10, 1) 100%
   );
 }
 
@@ -296,8 +296,8 @@ main {
 .grid-container .plane:last-child > *::after {
   background-image: linear-gradient(
     to top,
-    rgba(0, 0, 0, 255) var(--grid),
-    rgba(0, 0, 0, 0)
+    rgba(10, 10, 10, 255) var(--grid),
+    rgba(10, 10, 10, 0)
   );
 }
 
@@ -340,8 +340,8 @@ main {
 .grid-container .plane > *::after {
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 255) var(--grid),
-    rgba(0, 0, 0, 0)
+    rgba(10, 10, 10, 255) var(--grid),
+    rgba(10, 10, 10, 0)
   );
   z-index: 1;
   transform: translateZ(1px);
