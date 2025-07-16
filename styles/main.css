@@ -177,13 +177,6 @@ main {
   BACKGROUND STYLES - EARTH
 */
 
-html {
-  height: 100%;
-  width: 100%;
-  color: #fff;
-  background: radial-gradient(ellipse at bottom, #0c1116 0%, #090a0f 100%);
-}
-
 #horizon {
   position: fixed;
   width: 160%;
