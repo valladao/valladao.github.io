@@ -103,6 +103,10 @@ h2 {
   margin-bottom: 32px;
 }
 
+h3 {
+  color: var(--accent);
+}
+
 h4 {
   font-size: 18px;
   margin-bottom: 8px;
@@ -115,7 +119,7 @@ p {
 
 a,
 .link {
-  color: var(--accent);
+  color: var(--brand);
   display: block;
   text-align: end;
 }
@@ -173,8 +177,8 @@ main {
   margin: 16px;
   padding: 24px;
   cursor: pointer;
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--white);
+  background-color: rgba(10, 10, 10, 0.4);
+  border: 1px solid var(--brand);
   transition: background-color 0.3s ease;
   height: 304px;
 }
@@ -188,7 +192,7 @@ main {
 }
 
 .card:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 /*
