@@ -71,11 +71,11 @@ h6 {
 
 :root {
   --font-heading: "Audiowide", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-body: "Open Sans", sans-serif;
   --black: #0a0a0a;
   --white: #e5e5e5;
   --brand: #038bff;
-  --accent: #00ffe0;
+  --accent: #ff2eff;
 }
 
 body {
@@ -94,34 +94,58 @@ h3 {
 
 h1 {
   font-size: 56px;
+  margin: 0;
 }
 
 h2 {
   font-size: 32px;
   color: var(--accent);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
-p {
-  font-size: 16px;
-  margin-bottom: 16px;
-}
-
-a {
+h3 {
   color: var(--accent);
 }
 
+h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+a,
+.link {
+  color: var(--brand);
+  display: block;
+  text-align: end;
+}
+
+.link a,
+.link span {
+  display: inline;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 main {
-  width: 912px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 32px;
+  width: 936px;
+  margin: 48px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 64px;
   backdrop-filter: blur(10px);
-  padding: 32px;
+  padding: 0 56px 56px;
   border: 1px solid var(--brand);
+}
+
+.footer {
+  height: 48px;
 }
 
 #hero {
@@ -132,7 +156,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 56px;
 }
 
 .icons {
@@ -153,10 +177,10 @@ main {
   margin: 16px;
   padding: 24px;
   cursor: pointer;
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--white);
+  background-color: rgba(10, 10, 10, 0.4);
+  border: 1px solid var(--brand);
   transition: background-color 0.3s ease;
-  height: 280px;
+  height: 304px;
 }
 
 .card-content {
@@ -168,19 +192,12 @@ main {
 }
 
 .card:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 /*
   BACKGROUND STYLES - EARTH
 */
-
-html {
-  height: 100%;
-  width: 100%;
-  color: #fff;
-  background: radial-gradient(ellipse at bottom, #0c1116 0%, #090a0f 100%);
-}
 
 #horizon {
   position: fixed;
@@ -226,14 +243,14 @@ html {
   background: #215496;
   filter: blur(200px);
   opacity: 0.7;
-  top: -10%;
+  top: -15%;
 }
 
 #earth {
   position: fixed;
   width: 200%;
   height: 100%;
-  background: black;
+  background: var(--black);
   border-radius: 100% / 100%;
   left: 50%;
   bottom: -75%;
@@ -257,9 +274,9 @@ html {
   border-radius: 100% / 100%;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 1) 100%
+    rgba(10, 10, 10, 1) 0%,
+    rgba(10, 10, 10, 0) 50%,
+    rgba(10, 10, 10, 1) 100%
   );
 }
 
@@ -301,8 +318,8 @@ html {
 .grid-container .plane:last-child > *::after {
   background-image: linear-gradient(
     to top,
-    rgba(0, 0, 0, 255) var(--grid),
-    rgba(0, 0, 0, 0)
+    rgba(10, 10, 10, 255) var(--grid),
+    rgba(10, 10, 10, 0)
   );
 }
 
@@ -345,8 +362,8 @@ html {
 .grid-container .plane > *::after {
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 255) var(--grid),
-    rgba(0, 0, 0, 0)
+    rgba(10, 10, 10, 255) var(--grid),
+    rgba(10, 10, 10, 0)
   );
   z-index: 1;
   transform: translateZ(1px);
