@@ -93,7 +93,7 @@ h3 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 36px;
   margin: 0;
 }
 
@@ -134,13 +134,12 @@ a,
 }
 
 main {
-  width: 936px;
-  margin: 48px auto 0;
+  margin: 16px 16px 0;
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 40px;
   backdrop-filter: blur(10px);
-  padding: 0 56px 56px;
+  padding: 0 24px 24px;
   border: 1px solid var(--brand);
 }
 
@@ -149,14 +148,16 @@ main {
 }
 
 #hero {
-  padding-top: 64px;
+  padding-top: 32px;
 }
 
 .header {
   display: flex;
+  gap: 24px;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 
 .icons {
@@ -382,5 +383,27 @@ main {
 
   to {
     transform: translateY(calc(var(--grid) * var(--dir)));
+  }
+}
+
+@media (min-width: 960px) {
+  main {
+    width: 936px;
+    margin: 48px auto 0;
+    padding: 0 56px 56px;
+    gap: 64px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  .header {
+    flex-direction: row;
+    margin-bottom: 56px;
+  }
+
+  #hero {
+    padding-top: 64px;
   }
 }
