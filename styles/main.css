@@ -139,9 +139,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px); /* Creates stacking context */
   padding: 0 40px 24px;
-  border: 1px solid var(--brand);
+}
+
+#about,
+#projects,
+#skills {
+  backdrop-filter: blur(10px);
 }
 
 .footer {
