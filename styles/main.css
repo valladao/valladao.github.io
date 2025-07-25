@@ -135,18 +135,13 @@ a,
 }
 
 main {
+  position: relative;
   margin: 16px 16px 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  backdrop-filter: blur(0px); /* Creates stacking context */
   padding: 0 40px 24px;
-}
-
-#about,
-#projects,
-#skills {
-  backdrop-filter: blur(10px);
+  height: 100%;
 }
 
 .footer {
