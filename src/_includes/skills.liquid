@@ -1,41 +1,132 @@
-  <!--
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="cards">
-      <div class="card" data-project="decathlon">
-        <div class="card-content">
-          <h3>Shopify Ecosystem</h3>
-          <h4>Theme Development</h4>
-          <h4>Theme Customization</h4>
-          <h4>App Development</h4>
-          <h4>Hydrogen | Headless</h4>
-        </div>
+<style>
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    display: grid;
+    width: 400px;
+    aspect-ratio: 3/4;
+    --bc: white; /*border-color*/
+    --bs: 10px; /*border-size*/
+    --cs: 20px; /*cut-size*/
+    grid-template-rows: var(--cs) auto 1fr;
+  }
+
+  .card > .label {
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    min-width: 50%;
+    min-height: calc(var(--cs) * 2 + var(--bs));
+
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-color: var(--bc);
+
+    clip-path: polygon(
+      var(--cs) 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 var(--cs)
+    );
+  }
+
+.card > .card-content {
+  padding: 24px;
+
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/grid.svg);
+  background-size: 6%;
+  background-color: rgba(0,0,255,0.3);
+
+  grid-area: 2/1/4/2;
+  transition: .8s;
+  object-fit: cover;
+  --em: .5;
+  clip-path: polygon(
+    calc(var(--cs) + var(--bs) * var(--em)) var(--bs),
+    calc(100% - var(--bs)) var(--bs),
+    calc(100% - var(--bs)) calc(100% - var(--cs) - var(--bs)),
+    calc(50% + var(--cs) - var(--bs) * var(--em)) calc(100% - var(--cs) - var(--bs)),
+    calc(50% - var(--bs) * var(--em)) calc(100% - var(--bs)),
+    var(--bs) calc(100% - var(--bs)),
+    var(--bs) calc(var(--cs) + var(--bs) * var(--em))
+    );
+}
+
+.card::before {
+  content: "";
+  grid-area: 2/1/4/2;
+  background-color: var(--bc);
+  clip-path: polygon(
+    var(--cs) 0,
+    100% 0,
+    100% calc(100% - var(--cs)),
+    calc(50% + var(--cs)) calc(100% - var(--cs)),
+    50% 100%,
+    0% 100%,
+    0 var(--cs)
+  );
+}
+  .card-content {
+    flex-grow: 1;
+  }
+
+  .card-content {
+    margin-bottom: 16px;
+  }
+
+  .card:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+
+</style>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-content">
+        <h4>Theme Development</h4>
+        <h4>Theme Customization</h4>
+        <h4>App Development</h4>
+        <h4>Hydrogen | Headless</h4>
         <div class="link">
           <span>+ </span><span class="underline">Know more</span>
         </div>
       </div>
-      <div class="card" data-project="terracotta">
-        <div class="card-content">
-          <h3>Frontend</h3>
-          <h4>Google Analitics</h4>
-          <h4>Remix</h4>
-          <h4>Next.js | TypeScript</h4>
-          <h4>A11y | SEO</h4>
-        </div>
-        <div class="link">
-          <span>+ </span><span class="underline">Know more</span>
-        </div>
+      <div class="label"><h3>Shopify Ecosystem</h3></div>
+    </div>
+    <!--
+    <div class="card" data-project="terracotta">
+      <div class="card-content">
+        <h3>Frontend</h3>
+        <h4>Google Analitics</h4>
+        <h4>Remix</h4>
+        <h4>Next.js | TypeScript</h4>
+        <h4>A11y | SEO</h4>
       </div>
-      <div class="card" data-project="pedro">
-        <div class="card-content">
-          <h3>Performance</h3>
-          <h4>Image optmization</h4>
-          <h4>Core Web Vitals</h4>
-        </div>
-        <div class="link">
-          <span>+ </span><span class="underline">Know more</span>
-        </div>
+      <div class="link">
+        <span>+ </span><span class="underline">Know more</span>
       </div>
     </div>
-  </section>
-  -->
+    <div class="card" data-project="pedro">
+      <div class="card-content">
+        <h3>Performance</h3>
+        <h4>Image optmization</h4>
+        <h4>Core Web Vitals</h4>
+      </div>
+      <div class="link">
+        <span>+ </span><span class="underline">Know more</span>
+      </div>
+    </div>
+    -->
+  </div>
+</section>
