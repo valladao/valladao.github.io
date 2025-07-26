@@ -44,20 +44,21 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       new Swiper('.js-cards', {
-        slidesPerView: 1.1,
         spaceBetween: 64,
+        freeMode: true,
+        breakpoints: {
+          960: {
+            slidesPerView: 3,
+            spaceBetween: 256,
+          },
+        },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        },
+        centeredSlides: false,
+        loop: false,
+        watchOverflow: false,
       });
     </script>
   </body>
