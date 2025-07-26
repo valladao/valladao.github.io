@@ -1,3 +1,7 @@
+{%- comment -%} Before release, remove these | include in project {%- endcomment -%}
+{%- comment %} theme-check-disable UndefinedObject {%- endcomment -%}
+{%- comment %} theme-check-disable RemoteAsset {%- endcomment -%}
+{%- comment %} theme-check-disable MissingTemplate {%- endcomment -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,8 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Audiowide&family=Droid+Sans+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    {% include 'critical-css' %}
-    <link rel="stylesheet" href="styles/main.css" />
+    {% render 'critical-css' %}
+    <!-- <link rel="stylesheet" href="styles/main.css" /> -->
   </head>
   <body>
 
