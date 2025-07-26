@@ -41,24 +41,15 @@
 
     {%- comment -%} Script {%- endcomment -%}
     <!-- <script type="module" src="scripts/main.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script>
-      new Swiper('.js-cards', {
-        spaceBetween: 64,
-        freeMode: true,
-        breakpoints: {
-          960: {
-            slidesPerView: 3,
-            spaceBetween: 256,
-          },
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        centeredSlides: false,
-        loop: false,
-        watchOverflow: false,
+      window.addEventListener('load', () => {
+        new Swiper('.js-cards', {
+          width: 320,
+          slidesPerView: 1,
+          spaceBetween: 32,
+          freeMode: true,
+        });
       });
     </script>
   </body>
