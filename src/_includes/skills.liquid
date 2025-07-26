@@ -13,7 +13,7 @@
     display: grid;
     width: 400px;
     aspect-ratio: 3/4;
-    --bc: white; /*border-color*/
+    --bc: var(--accent); /*border-color*/
     --bs: 10px; /*border-size*/
     --cs: 20px; /*cut-size*/
     grid-template-rows: var(--cs) auto 1fr;
@@ -39,8 +39,17 @@
     );
   }
 
-.card > .card-content {
-  padding: 24px;
+  .label h3 {
+    color: var(--white);
+    margin-bottom: 0;
+    padding: 0 16px;
+  }
+
+.card > .card-internal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 24px;
 
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/grid.svg);
   background-size: 6%;
@@ -75,12 +84,8 @@
     0 var(--cs)
   );
 }
-  .card-content {
+  .card-internal {
     flex-grow: 1;
-  }
-
-  .card-content {
-    margin-bottom: 16px;
   }
 
   .card:hover {
@@ -93,11 +98,13 @@
   <h2>Skills</h2>
   <div class="cards">
     <div class="card">
-      <div class="card-content">
-        <h4>Theme Development</h4>
-        <h4>Theme Customization</h4>
-        <h4>App Development</h4>
-        <h4>Hydrogen | Headless</h4>
+      <div class="card-internal">
+        <div class="card-content">
+          <h4>Theme Development</h4>
+          <h4>Theme Customization</h4>
+          <h4>App Development</h4>
+          <h4>Hydrogen | Headless</h4>
+        </div>
         <div class="link">
           <span>+ </span><span class="underline">Know more</span>
         </div>
@@ -106,7 +113,7 @@
     </div>
     <!--
     <div class="card" data-project="terracotta">
-      <div class="card-content">
+      <div class="card-internal">
         <h3>Frontend</h3>
         <h4>Google Analitics</h4>
         <h4>Remix</h4>
@@ -118,7 +125,7 @@
       </div>
     </div>
     <div class="card" data-project="pedro">
-      <div class="card-content">
+      <div class="card-internal">
         <h3>Performance</h3>
         <h4>Image optmization</h4>
         <h4>Core Web Vitals</h4>
