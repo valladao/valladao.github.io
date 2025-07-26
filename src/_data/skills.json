@@ -1,0 +1,19 @@
+[
+  {
+    "label": "Shopify Ecosystem",
+    "items": [
+      "Theme Development",
+      "Theme Customization",
+      "App Development",
+      "Hydrogen | Headless"
+    ]
+  },
+  {
+    "label": "Frontend",
+    "items": ["Google Analytics", "Remix", "Next.js | TypeScript", "A11y | SEO"]
+  },
+  {
+    "label": "Performance",
+    "items": ["Image Optimization", "Core Web Vitals"]
+  }
+]
