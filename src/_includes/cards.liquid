@@ -1,17 +1,27 @@
+{%- comment -%} Before release, remove these | include in project {%- endcomment -%}
+{%- comment %} theme-check-disable UndefinedObject {%- endcomment -%}
 <div class="cards">
-  {% for card in cards %}
-    <div class="card">
-      <div class="card-internal">
-        <div class="card-content">
-          {% for item in card.items %}
-            <h4>{{ item }}</h4>
-          {% endfor %}
+  <div class="swiper js-cards">
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-wrapper">
+      {% for card in cards %}
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-internal">
+              <div class="card-content">
+                {% for item in card.items %}
+                  <h4>{{ item }}</h4>
+                {% endfor %}
+              </div>
+              <div class="link">
+                <span>+ </span><span class="underline">Know more</span>
+              </div>
+            </div>
+            <div class="label"><h3>{{ card.label }}</h3></div>
+          </div>
         </div>
-        <div class="link">
-          <span>+ </span><span class="underline">Know more</span>
-        </div>
-      </div>
-      <div class="label"><h3>{{ card.label }}</h3></div>
+      {% endfor %}
     </div>
-  {% endfor %}
+    <div class="swiper-button-next"></div>
+  </div>
 </div>
