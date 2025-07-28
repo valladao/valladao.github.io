@@ -141,11 +141,10 @@ a,
 
 main {
   position: relative;
-  margin: 16px 16px 0;
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding: 0 40px 80px;
 }
 
 .footer {
@@ -153,7 +152,18 @@ main {
 }
 
 #hero {
+  margin-right: 16px;
+  margin-left: 16px;
   padding-top: 32px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+#about {
+  margin-right: 16px;
+  margin-left: 16px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .header {
@@ -485,15 +495,24 @@ main {
   color: var(--white);
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: var(--accent);
-  top: 50%;
-  transform: translateY(-50%);
+#skills {
+  margin-right: 16px;
+  margin-left: 16px;
+  padding-bottom: 80px;
 }
 
-.swiper {
-  overflow: visible;
+#skills h2 {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.swiper-wrapper {
+  margin-right: 40px !important;
+  margin-left: 40px !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  --swiper-navigation-sides-offset: 0;
 }
 
 </style>

@@ -47,8 +47,12 @@
         new Swiper('.js-cards', {
           width: 320,
           slidesPerView: 1,
-          spaceBetween: 32,
+          spaceBetween: 64,
           freeMode: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
         });
       });
     </script>
