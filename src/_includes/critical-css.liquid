@@ -107,6 +107,7 @@ h2 {
 
 h3 {
   color: var(--accent);
+  line-height: 1.8;
 }
 
 h4 {
@@ -370,7 +371,7 @@ main {
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 792px) {
   main {
     width: 936px;
     margin: 48px auto 0;
@@ -417,6 +418,13 @@ main {
   --bs: 10px; /*border-size*/
   --cs: 20px; /*cut-size*/
   grid-template-rows: var(--cs) auto 1fr;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.card * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
 }
 
 .card::before {
@@ -486,33 +494,67 @@ main {
   );
 }
 
-.card-internal:hover {
-  border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/brace.svg) 25 25;
-  background-size: 4%;
-}
+  .card-internal:hover {
+    border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/brace.svg) 25 25;
+    background-size: 4%;
+  }
 
-.card-internal > .link > span {
-  color: var(--white);
-}
+  .card-internal > .link > span {
+    color: var(--white);
+  }
 
-#skills {
-  margin-right: 16px;
-  margin-left: 16px;
-  padding-bottom: 80px;
-}
+  #skills {
+    padding-bottom: 80px;
+  }
 
-#skills h2 {
-  padding-right: 40px;
-  padding-left: 40px;
-}
+  #skills h2 {
+    margin-right: 16px;
+    margin-left: 16px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 
-.swiper-wrapper {
-  margin-right: 40px !important;
-  margin-left: 40px !important;
-}
+  .swiper-wrapper {
+    margin-right: calc((100vw - 320px) / 2) !important;
+    margin-left: calc((100vw - 320px) / 2) !important;
+  }
 
-.swiper-button-prev, .swiper-button-next {
-  --swiper-navigation-sides-offset: 0;
-}
+  .swiper-button-prev {
+    margin-left: calc((100vw - 390px) / 2);
+  }
+
+  .swiper-button-next {
+    margin-right: calc((100vw - 390px) / 2);
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    --swiper-navigation-sides-offset: 0;
+  }
+
+  @media (max-width: 386px) {
+    .swiper-button-prev {
+      margin-left: 0;
+    }
+
+    .swiper-button-next {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 792px) {
+    .swiper-wrapper {
+      margin-right: 42px !important;
+      margin-left: 42px !important;
+    }
+
+    .swiper-button-prev {
+      margin-left: 0;
+    }
+
+    .swiper-button-next {
+      margin-right: 16px;
+    }
+
+  }
 
 </style>
