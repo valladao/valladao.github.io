@@ -17,9 +17,12 @@ title: Manoel Valladao | Senior Shopify Web Developer
     <p>We can build fast, accessible and scalable e-commerce experiences</p>
   </section>
   {% render 'about' %}
-  <section id="skills">
+  <section id="skills" class="cards-section">
     <h2>Skills</h2>
     {% render 'cards', cards: skills %}
   </section>
-  <!-- {% render 'projects' %} -->
+  <section id="projects" class="cards-section">
+    <h2>Projects</h2>
+    {% render 'cards', cards: projects %}
+  </section>
 </main>
