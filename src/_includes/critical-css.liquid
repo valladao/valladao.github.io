@@ -496,19 +496,27 @@ main {
   }
 
   #skills {
-    margin-right: 16px;
-    margin-left: 16px;
     padding-bottom: 80px;
   }
 
   #skills h2 {
+    margin-right: 16px;
+    margin-left: 16px;
     padding-right: 40px;
     padding-left: 40px;
   }
 
   .swiper-wrapper {
-    margin-right: 40px !important;
-    margin-left: 40px !important;
+    margin-right: calc((100vw - 320px) / 2) !important;
+    margin-left: calc((100vw - 320px) / 2) !important;
+  }
+
+  .swiper-button-prev {
+    margin-left: calc((100vw - 390px) / 2);
+  }
+
+  .swiper-button-next {
+    margin-right: calc((100vw - 390px) / 2);
   }
 
   .swiper-button-prev, .swiper-button-next {
