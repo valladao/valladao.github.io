@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "deploy": "node ./scripts/deploy.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2"
