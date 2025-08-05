@@ -417,6 +417,13 @@ main {
   --bs: 10px; /*border-size*/
   --cs: 20px; /*cut-size*/
   grid-template-rows: var(--cs) auto 1fr;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.card * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
 }
 
 .card::before {
