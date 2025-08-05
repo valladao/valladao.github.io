@@ -4,6 +4,7 @@ title: Manoel Valladao | Senior Shopify Web Developer
 ---
 {%- comment -%} Before release, remove these | include in project {%- endcomment -%}
 {%- comment %} theme-check-disable MissingTemplate {%- endcomment -%}
+{%- comment %} theme-check-disable UndefinedObject {%- endcomment -%}
 
 <main>
   <section id="hero">
@@ -16,6 +17,9 @@ title: Manoel Valladao | Senior Shopify Web Developer
     <p>We can build fast, accessible and scalable e-commerce experiences</p>
   </section>
   {% render 'about' %}
-  {% render 'projects' %}
-  {% render 'skills' %}
+  <section id="skills">
+    <h2>Skills</h2>
+    {% render 'cards', cards: skills %}
+  </section>
+  <!-- {% render 'projects' %} -->
 </main>
