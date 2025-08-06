@@ -1,0 +1,28 @@
+---
+layout: layout.liquid
+title: Manoel Valladao | Senior Shopify Web Developer
+---
+{%- comment -%} Before release, remove these | include in project {%- endcomment -%}
+{%- comment %} theme-check-disable MissingTemplate {%- endcomment -%}
+{%- comment %} theme-check-disable UndefinedObject {%- endcomment -%}
+
+<main>
+  <section id="hero">
+    <div class="header">
+      <h1>Manoel Valladão</h1>
+      {% render 'icons' %}
+    </div>
+    <h2>Senior Shopify Web Developer</h2>
+    <h3>E-commerce | Frontend | Web Performance | A11y</h3>
+    <p>We can build fast, accessible and scalable e-commerce experiences</p>
+  </section>
+  {% render 'about' %}
+  <section id="skills" class="cards-section">
+    <h2>Skills</h2>
+    {% render 'cards', cards: skills %}
+  </section>
+  <section id="projects" class="cards-section">
+    <h2>Projects</h2>
+    {% render 'cards', cards: projects %}
+  </section>
+</main>
