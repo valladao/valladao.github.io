@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manoel Valladao | Senior Shopify Web Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Droid+Sans+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+/*
+  CSS STYLES RESET
+*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  GLOBAL CSS STYLES
+*/
+
+:root {
+  --font-heading: "Audiowide", sans-serif;
+  --font-body: "Droid Sans Mono", sans-serif;
+  --black: #0a0a0a;
+  --white: #e5e5e5;
+  --brand: #038bff;
+  --accent: #ff2eff;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--white);
+  background-color: var(--black);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 52px;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  color: var(--accent);
+  margin-bottom: 32px;
+}
+
+h3 {
+  color: var(--accent);
+  line-height: 1.8;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+a,
+.link span {
+  color: var(--brand);
+}
+
+a,
+.link {
+  display: block;
+  text-align: end;
+}
+
+.link a,
+.link span {
+  display: inline;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+main {
+  position: relative;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer {
+  height: 48px;
+}
+
+#hero {
+  margin-right: 16px;
+  margin-left: 16px;
+  padding-top: 32px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+#about {
+  margin-right: 16px;
+  margin-left: 16px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.header {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.icons {
+  display: none;
+  gap: 8px;
+}
+
+/*
+  BACKGROUND STYLES - EARTH
+*/
+
+#horizon {
+  position: fixed;
+  width: 160%;
+  height: 70%;
+  border-radius: 100% / 100%;
+  background: var(--brand);
+  filter: blur(30px);
+  left: 50%;
+  bottom: -45%;
+  margin-left: -80%;
+}
+
+#horizon::before {
+  content: "";
+  position: absolute;
+  width: 81.25%;
+  height: 70%;
+  border-radius: 100% / 100%;
+  background: #51afff;
+  filter: blur(30px);
+  opacity: 0.6;
+  margin-left: 9.375%;
+}
+
+#horizon::after {
+  content: "";
+  position: absolute;
+  width: 32%;
+  height: 20%;
+  border-radius: 650px / 350px;
+  background: #b0daff;
+  filter: blur(30px);
+  opacity: 0.5;
+  margin-left: 34%;
+}
+
+.glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100% / 100%;
+  background: #215496;
+  filter: blur(200px);
+  opacity: 0.7;
+  top: -15%;
+}
+
+#earth {
+  position: fixed;
+  width: 200%;
+  height: 100%;
+  background: var(--black);
+  border-radius: 100% / 100%;
+  left: 50%;
+  bottom: -75%;
+  margin-left: -100%;
+}
+
+#earth::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100% / 100%;
+  box-shadow: inset 0px 0px 62px 20px rgba(60, 105, 138, 0.85);
+}
+
+#earth::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100% / 100%;
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(10, 10, 10, 0) 50%,
+    rgba(10, 10, 10, 1) 100%
+  );
+}
+
+/*
+  BACKGROUND STYLES - GRID
+*/
+
+.grid-container {
+  position: fixed;
+  --grid: 10rem;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  perspective: 100rem;
+  animation: rotate 100s linear infinite forwards;
+}
+
+.grid-container .plane {
+  --dir: 1;
+  width: 300%;
+  height: 150%;
+  min-height: 70rem;
+  position: absolute;
+  bottom: 0;
+  transform-style: preserve-3d;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotateX(85deg);
+}
+
+.grid-container .plane:last-child {
+  --dir: -1;
+  top: 0;
+  transform-origin: top center;
+  transform: translateX(-50%) rotateX(-85deg);
+}
+
+.grid-container .plane:last-child > *::after {
+  background-image: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 255) var(--grid),
+    rgba(10, 10, 10, 0)
+  );
+}
+
+.grid-container .plane > * {
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.grid-container .plane > *::before,
+.grid-container .plane > *::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.grid-container .plane > *::before {
+  background-image: repeating-linear-gradient(
+      to left,
+      #215496,
+      #215496 4px,
+      transparent 4px,
+      transparent var(--grid)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #215496,
+      #215496 4px,
+      transparent 4px,
+      transparent var(--grid)
+    );
+  animation: move 1s linear infinite forwards;
+}
+
+.grid-container .plane > *::after {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 255) var(--grid),
+    rgba(10, 10, 10, 0)
+  );
+  z-index: 1;
+  transform: translateZ(1px);
+}
+
+.grid-container .plane .glow {
+  filter: blur(1rem);
+  z-index: 1;
+  mix-blend-mode: plus-lighter;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(calc(var(--grid) * var(--dir)));
+  }
+}
+
+@media (min-width: 792px) {
+  main {
+    width: 936px;
+    margin: 48px auto 0;
+    padding: 0 56px 56px;
+    gap: 64px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  .header {
+    flex-direction: row;
+    margin-bottom: 56px;
+  }
+
+  #hero {
+    padding-top: 64px;
+  }
+
+  .icons {
+    display: flex;
+  }
+}
+
+/*
+  CARD SYSTEM
+*/
+
+.cards {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  cursor: pointer;
+  display: grid;
+  min-width: 320px;
+  max-width: 320px;
+  aspect-ratio: 1/1;
+  --bc: var(--brand); /*border-color*/
+  --bs: 10px; /*border-size*/
+  --cs: 20px; /*cut-size*/
+  grid-template-rows: var(--cs) auto 1fr;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.card * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.card::before {
+  content: "";
+  grid-area: 2/1/4/2;
+  background-color: var(--bc);
+  clip-path: polygon(
+    var(--cs) 0,
+    100% 0,
+    100% calc(100% - var(--cs)),
+    calc(50% + var(--cs)) calc(100% - var(--cs)),
+    50% 100%,
+    0% 100%,
+    0 var(--cs)
+  );
+}
+
+.card > .label {
+  grid-area: 1/1/2/2;
+  justify-self: end;
+  min-width: 50%;
+  min-height: calc(var(--cs) * 2 + var(--bs));
+
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: var(--bc);
+
+  clip-path: polygon(
+    var(--cs) 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 var(--cs)
+  );
+}
+
+.label h3 {
+  color: var(--white);
+  margin-bottom: 0;
+  padding: 0 16px;
+}
+
+.card-internal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 48px 32px;
+
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/grid.svg);
+  background-size: 6%;
+  background-color: var(--black);
+
+  grid-area: 2/1/4/2;
+  transition: .8s;
+  object-fit: cover;
+  --em: .5;
+  clip-path: polygon(
+    calc(var(--cs) + var(--bs) * var(--em)) var(--bs),
+    calc(100% - var(--bs)) var(--bs),
+    calc(100% - var(--bs)) calc(100% - var(--cs) - var(--bs)),
+    calc(50% + var(--cs) - var(--bs) * var(--em)) calc(100% - var(--cs) - var(--bs)),
+    calc(50% - var(--bs) * var(--em)) calc(100% - var(--bs)),
+    var(--bs) calc(100% - var(--bs)),
+    var(--bs) calc(var(--cs) + var(--bs) * var(--em))
+  );
+}
+
+  .card-internal:hover {
+    border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/brace.svg) 25 25;
+    background-size: 4%;
+  }
+
+  .card-internal > .link > span {
+    color: var(--white);
+  }
+
+  .cards-section h2 {
+    margin-right: 16px;
+    margin-left: 16px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .swiper-wrapper {
+    margin-right: calc((100vw - 320px) / 2) !important;
+    margin-left: calc((100vw - 320px) / 2) !important;
+  }
+
+  .swiper-button-prev {
+    margin-left: calc((100vw - 390px) / 2);
+  }
+
+  .swiper-button-next {
+    margin-right: calc((100vw - 390px) / 2);
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    --swiper-navigation-sides-offset: 0;
+  }
+
+  @media (max-width: 386px) {
+    .swiper-button-prev {
+      margin-left: 0;
+    }
+
+    .swiper-button-next {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 792px) {
+    .swiper-wrapper {
+      margin-right: 42px !important;
+      margin-left: 42px !important;
+    }
+
+    .swiper-button-prev {
+      margin-left: 0;
+    }
+
+    .swiper-button-next {
+      margin-right: 16px;
+    }
+
+  }
+
+</style>
+
+    <!-- <link rel="stylesheet" href="styles/main.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body><div class="grid-container">
+      <div class="plane">
+        <div class="grid"></div>
+        <div class="glow"></div>
+      </div>
+    </div>
+    <div id="horizon">
+      <div class="glow"></div>
+    </div>
+    <div id="earth"></div><main>
+  <section id="hero">
+    <div class="header">
+      <h1>Manoel Valladão</h1>
+      <div class="icons">
+  <a
+    href="https://www.linkedin.com/in/valladao"
+    id="linkedin"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 30 30"
+      width="30px"
+      height="30px"
+    >
+      <path
+        fill="#e5e5e5"
+        d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"
+      />
+    </svg>
+  </a>
+  <a
+    href="https://github.com/valladao"
+    id="github"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 30 30"
+      width="30px"
+      height="30px"
+    >
+      <path
+        fill="#e5e5e5"
+        d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+      />
+    </svg>
+  </a>
+  <a
+    href="https://valladao.github.io/cv/manoel-valladao-cv.pdf"
+    id="cv"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="26px"
+      height="26px"
+      viewBox="0 0 26 26"
+      version="1.1"
+    >
+      <g id="surface1">
+        <path
+          style="
+            stroke: none;
+            fill-rule: evenodd;
+            fill: #e5e5e5;
+            fill-opacity: 1;
+          "
+          d="M 15.855469 1.734375 L 15.855469 8.617188 L 22.738281 8.617188 L 22.738281 25.132812 L 3.464844 25.132812 L 3.464844 1.734375 Z M 12.382812 9.992188 C 12.175781 9.992188 11.992188 10.085938 11.859375 10.25 C 11.253906 10.980469 11.476562 12.601562 11.632812 13.566406 C 11.664062 13.785156 11.636719 14.003906 11.542969 14.203125 L 10.226562 17.046875 C 10.132812 17.253906 9.976562 17.421875 9.78125 17.527344 C 8.953125 17.988281 7.558594 18.621094 7.394531 19.753906 C 7.332031 20.125 7.453125 20.441406 7.742188 20.726562 C 7.933594 20.914062 8.171875 21.003906 8.425781 21.003906 C 9.417969 21.003906 10.046875 20.128906 10.722656 19.195312 C 11.019531 18.777344 11.472656 18.519531 11.96875 18.453125 C 12.898438 18.324219 14.015625 18.054688 14.691406 17.878906 C 15.03125 17.789062 15.375 17.8125 15.710938 17.917969 C 16.304688 18.109375 16.527344 18.222656 17.207031 18.222656 C 17.820312 18.222656 18.242188 18.082031 18.445312 17.804688 C 18.609375 17.597656 18.648438 17.324219 18.570312 17.003906 C 18.425781 16.484375 18.542969 15.910156 16.945312 15.910156 C 16.589844 15.910156 16.242188 15.945312 15.949219 15.984375 C 15.5 16.046875 15.058594 15.851562 14.769531 15.488281 C 14.375 14.992188 13.972656 14.410156 13.695312 13.984375 C 13.5 13.6875 13.433594 13.328125 13.496094 12.972656 C 13.6875 11.941406 13.722656 11.171875 13.210938 10.453125 C 12.996094 10.148438 12.707031 9.992188 12.382812 9.992188 Z M 17.230469 1.9375 L 22.53125 7.238281 L 17.230469 7.238281 Z M 17.230469 1.9375 "
+        />
+        <path
+          style="
+            stroke: none;
+            fill-rule: evenodd;
+            fill: #e5e5e5;
+            fill-opacity: 1;
+          "
+          d="M 11.046875 17.550781 C 12.171875 17.023438 14.410156 16.757812 14.410156 16.757812 C 13.285156 15.671875 12.632812 14.136719 12.632812 14.136719 C 12.105469 15.679688 11.171875 17.355469 11.046875 17.550781 "
+        />
+      </g>
+    </svg>
+  </a>
+  <a href="#" id="email">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="30px"
+      height="30px"
+      viewBox="0 0 30 30"
+      version="1.1"
+    >
+      <g id="surface1">
+        <path
+          style="
+            stroke: none;
+            fill-rule: evenodd;
+            fill: #e5e5e5;
+            fill-opacity: 1;
+          "
+          d="M 4.6875 6.5625 L 3.75 7.5 L 3.75 22.5 L 4.6875 23.4375 L 25.3125 23.4375 L 26.25 22.5 L 26.25 7.5 L 25.3125 6.5625 Z M 5.625 9.621094 L 5.625 21.5625 L 24.375 21.5625 L 24.375 9.617188 L 15 18.140625 Z M 22.886719 8.4375 L 7.113281 8.4375 L 15 15.609375 Z M 22.886719 8.4375 "
+        />
+      </g>
+    </svg>
+  </a>
+</div>
+
+    </div>
+    <h2>Senior Shopify Web Developer</h2>
+    <h3>E-commerce | Frontend | Web Performance | A11y</h3>
+    <p>We can build fast, accessible and scalable e-commerce experiences</p>
+  </section>
+  <section id="about">
+  <h2>About</h2>
+  <p>
+    Working with Shopify since 2009, I help brands create faster, more
+    accessible, and scalable e-commerce experiences, combining deep
+    technical skills with a strong focus on Web Performance and A11y best
+    practices.
+  </p>
+  <p>When I'm not coding, I like making expresso and playing Tennis.</p>
+  <div class="link"><span>+ </span><a href="#">Know more</a></div>
+</section>
+
+  <section id="skills" class="cards-section">
+    <h2>Skills</h2>
+    <div class="cards">
+  <div class="swiper js-cards">
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-wrapper">
+      
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-internal">
+              <div class="card-content">
+                
+                  <h4>Theme Development</h4>
+                
+                  <h4>Theme Customization</h4>
+                
+                  <h4>App Development</h4>
+                
+                  <h4>Hydrogen | Headless</h4>
+                
+              </div>
+              <div class="link">
+                <span>+ </span><span class="underline">Know more</span>
+              </div>
+            </div>
+            <div class="label"><h3>Shopify Ecosystem</h3></div>
+          </div>
+        </div>
+      
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-internal">
+              <div class="card-content">
+                
+                  <h4>Google Analytics</h4>
+                
+                  <h4>Remix</h4>
+                
+                  <h4>Next.js | TypeScript</h4>
+                
+                  <h4>A11y | SEO</h4>
+                
+              </div>
+              <div class="link">
+                <span>+ </span><span class="underline">Know more</span>
+              </div>
+            </div>
+            <div class="label"><h3>Frontend</h3></div>
+          </div>
+        </div>
+      
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-internal">
+              <div class="card-content">
+                
+                  <h4>Image Optimization</h4>
+                
+                  <h4>Core Web Vitals</h4>
+                
+              </div>
+              <div class="link">
+                <span>+ </span><span class="underline">Know more</span>
+              </div>
+            </div>
+            <div class="label"><h3>Performance</h3></div>
+          </div>
+        </div>
+      
+    </div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+  </section>
+  <section id="projects" class="cards-section">
+    <h2>Projects</h2>
+    <div class="cards">
+  <div class="swiper js-cards">
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-wrapper">
+      
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-internal">
+              <div class="card-content">
+                
+                  <h4>Shopify Development</h4>
+                
+              </div>
+              <div class="link">
+                <span>+ </span><span class="underline">Know more</span>
+              </div>
+            </div>
+            <div class="label"><h3>Decathlon</h3></div>
+          </div>
+        </div>
+      
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-internal">
+              <div class="card-content">
+                
+                  <h4>Full Stack System Development</h4>
+                
+              </div>
+              <div class="link">
+                <span>+ </span><span class="underline">Know more</span>
+              </div>
+            </div>
+            <div class="label"><h3>TerraCotta Arte Sacra</h3></div>
+          </div>
+        </div>
+      
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-internal">
+              <div class="card-content">
+                
+                  <h4>Composer Portfolio</h4>
+                
+                  <h4>Next.js | TypeScript | Sanity.io</h4>
+                
+              </div>
+              <div class="link">
+                <span>+ </span><span class="underline">Know more</span>
+              </div>
+            </div>
+            <div class="label"><h3>Pedro H Valladao</h3></div>
+          </div>
+        </div>
+      
+    </div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+  </section>
+</main>
+<div class="footer"></div><!-- <script type="module" src="scripts/main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script>
+      window.addEventListener('load', () => {
+        new Swiper('.js-cards', {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 64,
+            },
+            792: {
+              slidesPerView: 2,
+              spaceBetween: -16,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
