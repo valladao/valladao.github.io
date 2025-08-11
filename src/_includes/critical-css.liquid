@@ -553,4 +553,24 @@ main {
 
   }
 
+  /*
+    DIALOG STYLES
+  */
+
+  dialog {
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    background: rgba(10, 10, 10, 0.8);
+    color: var(--white);
+    padding: 32px;
+    max-width: 640px;
+    width: 90%;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 32px var(--accent);
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
 </style>

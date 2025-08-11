@@ -563,6 +563,26 @@ main {
 
   }
 
+  /*
+    DIALOG STYLES
+  */
+
+  dialog {
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    background: rgba(10, 10, 10, 0.8);
+    color: var(--white);
+    padding: 32px;
+    max-width: 640px;
+    width: 90%;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 32px var(--accent);
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
 </style>
 
     <!-- <link rel="stylesheet" href="styles/main.css" /> -->
@@ -837,27 +857,57 @@ main {
 
   </section>
 </main>
+
+<dialog id="project-dialog">
+  <form method="dialog">
+    <button class="close">×</button>
+    <h2>Decathlon</h2>
+    <p>Shopify theme for Decathlon USA.</p>
+    <ul class="tags">
+      <li>Liquid</li><li>Tailwind</li><li>A11y</li>
+    </ul>
+    <div class="actions">
+      <a href="#">Preview</a>
+      <a href="#">GitHub</a>
+    </div>
+  </form>
+</dialog>
 <div class="footer"></div><!-- <script type="module" src="scripts/main.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
     <script>
       window.addEventListener('load', () => {
+        // Swiper
         new Swiper('.js-cards', {
           navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
           breakpoints: {
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 64,
-            },
-            792: {
-              slidesPerView: 2,
-              spaceBetween: -16,
-            },
+            0: { slidesPerView: 1, spaceBetween: 64 },
+            792: { slidesPerView: 2, spaceBetween: -16 },
           },
         });
+
+        /** @type {HTMLDialogElement|null} */
+        const dialog = document.getElementById('project-dialog');
+        const cards = document.querySelectorAll('.card');
+
+        if (dialog) {
+          const closeBtn = dialog.querySelector('.close');
+
+          cards.forEach(card => {
+            card.addEventListener('click', () => {
+              if ('showModal' in dialog) dialog.showModal();
+            });
+          });
+
+          closeBtn && closeBtn.addEventListener('click', () => {
+            dialog.close();
+          });
+        }
       });
     </script>
+
   </body>
 </html>

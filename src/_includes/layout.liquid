@@ -42,25 +42,40 @@
     {%- comment -%} Script {%- endcomment -%}
     <!-- <script type="module" src="scripts/main.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
     <script>
       window.addEventListener('load', () => {
+        // Swiper
         new Swiper('.js-cards', {
           navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
           breakpoints: {
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 64,
-            },
-            792: {
-              slidesPerView: 2,
-              spaceBetween: -16,
-            },
+            0: { slidesPerView: 1, spaceBetween: 64 },
+            792: { slidesPerView: 2, spaceBetween: -16 },
           },
         });
+
+        /** @type {HTMLDialogElement|null} */
+        const dialog = document.getElementById('project-dialog');
+        const cards = document.querySelectorAll('.card');
+
+        if (dialog) {
+          const closeBtn = dialog.querySelector('.close');
+
+          cards.forEach(card => {
+            card.addEventListener('click', () => {
+              if ('showModal' in dialog) dialog.showModal();
+            });
+          });
+
+          closeBtn && closeBtn.addEventListener('click', () => {
+            dialog.close();
+          });
+        }
       });
     </script>
+
   </body>
 </html>
