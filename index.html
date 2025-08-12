@@ -418,12 +418,8 @@ main {
   align-items: stretch;
 }
 
-.card {
-  cursor: pointer;
+.tech-border {
   display: grid;
-  min-width: 320px;
-  max-width: 320px;
-  aspect-ratio: 1/1;
   --bc: var(--brand); /*border-color*/
   --bs: 10px; /*border-size*/
   --cs: 20px; /*cut-size*/
@@ -432,12 +428,21 @@ main {
   -webkit-user-select: none !important;
 }
 
-.card * {
+.card {
+  cursor: pointer;
+  min-width: 320px;
+  max-width: 320px;
+  aspect-ratio: 1/1;
+
+
+}
+
+.tech-border * {
   user-select: none !important;
   -webkit-user-select: none !important;
 }
 
-.card::before {
+.tech-border::before {
   content: "";
   grid-area: 2/1/4/2;
   background-color: var(--bc);
@@ -452,7 +457,7 @@ main {
   );
 }
 
-.card > .label {
+.tech-border > .label {
   grid-area: 1/1/2/2;
   justify-self: end;
   min-width: 50%;
@@ -478,7 +483,7 @@ main {
   padding: 0 16px;
 }
 
-.card-internal {
+.tech-border-internal {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -504,12 +509,12 @@ main {
   );
 }
 
-  .card-internal:hover {
+  .card:hover {
     border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/brace.svg) 25 25;
     background-size: 4%;
   }
 
-  .card-internal > .link > span {
+  .tech-border-internal > .link > span {
     color: var(--white);
   }
 
@@ -568,19 +573,29 @@ main {
   */
 
   dialog {
+    background: transparent;
+    border: none;
+    padding: 0;
+    max-width: none;
+    margin: 24px;
+    color: var(--white);
+/*
+    margin: 24px;
     border: 2px solid var(--accent);
-    border-radius: 12px;
     background: rgba(10, 10, 10, 0.8);
     color: var(--white);
     padding: 32px;
-    max-width: 640px;
-    width: 90%;
     backdrop-filter: blur(12px);
     box-shadow: 0 0 32px var(--accent);
+*/
   }
 
   dialog::backdrop {
+    background: transparent;
+    backdrop-filter: blur(12px);
+/*
     background: rgba(0, 0, 0, 0.6);
+*/
   }
 
 </style>
@@ -726,8 +741,8 @@ main {
     <div class="swiper-wrapper">
       
         <div class="swiper-slide">
-          <div class="card">
-            <div class="card-internal">
+          <div class="tech-border card js-card">
+            <div class="tech-border-internal">
               <div class="card-content">
                 
                   <h4>Theme Development</h4>
@@ -748,8 +763,8 @@ main {
         </div>
       
         <div class="swiper-slide">
-          <div class="card">
-            <div class="card-internal">
+          <div class="tech-border card js-card">
+            <div class="tech-border-internal">
               <div class="card-content">
                 
                   <h4>Google Analytics</h4>
@@ -770,8 +785,8 @@ main {
         </div>
       
         <div class="swiper-slide">
-          <div class="card">
-            <div class="card-internal">
+          <div class="tech-border card js-card">
+            <div class="tech-border-internal">
               <div class="card-content">
                 
                   <h4>Image Optimization</h4>
@@ -801,8 +816,8 @@ main {
     <div class="swiper-wrapper">
       
         <div class="swiper-slide">
-          <div class="card">
-            <div class="card-internal">
+          <div class="tech-border card js-card">
+            <div class="tech-border-internal">
               <div class="card-content">
                 
                   <h4>Shopify Development</h4>
@@ -817,8 +832,8 @@ main {
         </div>
       
         <div class="swiper-slide">
-          <div class="card">
-            <div class="card-internal">
+          <div class="tech-border card js-card">
+            <div class="tech-border-internal">
               <div class="card-content">
                 
                   <h4>Full Stack System Development</h4>
@@ -833,8 +848,8 @@ main {
         </div>
       
         <div class="swiper-slide">
-          <div class="card">
-            <div class="card-internal">
+          <div class="tech-border card js-card">
+            <div class="tech-border-internal">
               <div class="card-content">
                 
                   <h4>Composer Portfolio</h4>
@@ -859,19 +874,25 @@ main {
 </main>
 
 <dialog id="project-dialog">
-  <form method="dialog">
-    <button class="close">×</button>
-    <h2>Decathlon</h2>
-    <p>Shopify theme for Decathlon USA.</p>
-    <ul class="tags">
-      <li>Liquid</li><li>Tailwind</li><li>A11y</li>
-    </ul>
-    <div class="actions">
-      <a href="#">Preview</a>
-      <a href="#">GitHub</a>
+  <div class="tech-border">
+    <div class="tech-border-internal">
+      <h2>Decathlon</h2>
+      <p>Shopify theme for Decathlon USA.</p>
+      <ul class="tags">
+        <li>Liquid</li><li>Tailwind</li><li>A11y</li>
+      </ul>
+      <div class="actions">
+        <a href="#">Preview</a>
+        <a href="#">GitHub</a>
+      </div>
+      <form method="dialog">
+        <button class="close">×</button>
+      </form>
     </div>
-  </form>
+    <div class="label"><h3>X</h3></div>
+  </div>
 </dialog>
+
 <div class="footer"></div><!-- <script type="module" src="scripts/main.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
@@ -891,7 +912,7 @@ main {
 
         /** @type {HTMLDialogElement|null} */
         const dialog = document.getElementById('project-dialog');
-        const cards = document.querySelectorAll('.card');
+        const cards = document.querySelectorAll('.js-card');
 
         if (dialog) {
           const closeBtn = dialog.querySelector('.close');

@@ -408,12 +408,8 @@ main {
   align-items: stretch;
 }
 
-.card {
-  cursor: pointer;
+.tech-border {
   display: grid;
-  min-width: 320px;
-  max-width: 320px;
-  aspect-ratio: 1/1;
   --bc: var(--brand); /*border-color*/
   --bs: 10px; /*border-size*/
   --cs: 20px; /*cut-size*/
@@ -422,12 +418,21 @@ main {
   -webkit-user-select: none !important;
 }
 
-.card * {
+.card {
+  cursor: pointer;
+  min-width: 320px;
+  max-width: 320px;
+  aspect-ratio: 1/1;
+
+
+}
+
+.tech-border * {
   user-select: none !important;
   -webkit-user-select: none !important;
 }
 
-.card::before {
+.tech-border::before {
   content: "";
   grid-area: 2/1/4/2;
   background-color: var(--bc);
@@ -442,7 +447,7 @@ main {
   );
 }
 
-.card > .label {
+.tech-border > .label {
   grid-area: 1/1/2/2;
   justify-self: end;
   min-width: 50%;
@@ -468,7 +473,7 @@ main {
   padding: 0 16px;
 }
 
-.card-internal {
+.tech-border-internal {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -494,12 +499,12 @@ main {
   );
 }
 
-  .card-internal:hover {
+  .card:hover {
     border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/brace.svg) 25 25;
     background-size: 4%;
   }
 
-  .card-internal > .link > span {
+  .tech-border-internal > .link > span {
     color: var(--white);
   }
 
@@ -558,19 +563,29 @@ main {
   */
 
   dialog {
+    background: transparent;
+    border: none;
+    padding: 0;
+    max-width: none;
+    margin: 24px;
+    color: var(--white);
+/*
+    margin: 24px;
     border: 2px solid var(--accent);
-    border-radius: 12px;
     background: rgba(10, 10, 10, 0.8);
     color: var(--white);
     padding: 32px;
-    max-width: 640px;
-    width: 90%;
     backdrop-filter: blur(12px);
     box-shadow: 0 0 32px var(--accent);
+*/
   }
 
   dialog::backdrop {
+    background: transparent;
+    backdrop-filter: blur(12px);
+/*
     background: rgba(0, 0, 0, 0.6);
+*/
   }
 
 </style>
