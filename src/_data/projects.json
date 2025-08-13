@@ -1,7 +1,30 @@
 [
   {
-    "label": "Decathlon",
-    "items": ["Shopify Development"]
+    "label": "Decathlon USA",
+    "jobPosition": "Senior Shopify Web Developer",
+    "items": [
+      "Shopify Development",
+      "Hydrogen",
+      "A11y | Google Analytics",
+      "Performance Optimization"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "data": "Dedicatedly working for the world's largest sporting goods retailer (Decathlon), focusing on its US operations. As the primary web developer for Shopify e-commerce operations, responsibilities spanned both the legacy Shopify Liquid Theme and the development of new storefronts using Shopify Online Store 2.0 and Hydrogen. My key contributions include:"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Implement new sites for Decathlon and Van Rysel Cycling.",
+          "Deployed multiple site redesigns, features, and sections.",
+          "Led performance optimization initiatives.",
+          "Drove accessibility compliance through repeated audit and implementation cycles.",
+          "Migrated the analytics stack to Google Analytics 4.",
+          "Initiated the Hydrogen storefront development."
+        ]
+      }
+    ]
   },
   {
     "label": "TerraCotta Arte Sacra",

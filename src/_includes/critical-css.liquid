@@ -450,7 +450,6 @@ main {
 .tech-border > .label {
   grid-area: 1/1/2/2;
   justify-self: end;
-  min-width: 50%;
   min-height: calc(var(--cs) * 2 + var(--bs));
 
   display: grid;
@@ -465,6 +464,10 @@ main {
     0 100%,
     0 var(--cs)
   );
+}
+
+.card > label {
+  min-width: 50%;
 }
 
 .label h3 {
@@ -569,23 +572,16 @@ main {
     max-width: none;
     margin: 24px;
     color: var(--white);
-/*
-    margin: 24px;
-    border: 2px solid var(--accent);
-    background: rgba(10, 10, 10, 0.8);
-    color: var(--white);
-    padding: 32px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 0 32px var(--accent);
-*/
   }
 
   dialog::backdrop {
     background: transparent;
     backdrop-filter: blur(12px);
-/*
-    background: rgba(0, 0, 0, 0.6);
-*/
+  }
+
+  .label button {
+    background: transparent;
+    border: none;
   }
 
 </style>

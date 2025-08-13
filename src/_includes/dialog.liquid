@@ -1,19 +1,33 @@
-<dialog id="project-dialog">
-  <div class="tech-border">
-    <div class="tech-border-internal">
-      <h2>Decathlon</h2>
-      <p>Shopify theme for Decathlon USA.</p>
-      <ul class="tags">
-        <li>Liquid</li><li>Tailwind</li><li>A11y</li>
-      </ul>
-      <div class="actions">
-        <a href="#">Preview</a>
-        <a href="#">GitHub</a>
+{%- comment -%} Before release, remove these | include in project {%- endcomment -%}
+{%- comment %} theme-check-disable UndefinedObject {%- endcomment -%}
+{% for dialog in dialogs %}
+  <dialog id="project-dialog">
+    <div class="tech-border">
+      <div class="tech-border-internal">
+        <h2>{{ dialog.label }}</h2>
+        <h3>{{ dialog.jobPosition }}</h3>
+        {% for section in dialog.content %}
+          {% if section.type == "p" %}
+            <p>{{ section.data }}</p>
+          {% endif %}
+          {% if section.type == "list" %}
+            <ul>
+              {% for item in section.data %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+        <div class="actions">
+          <a href="#">Preview</a>
+          <a href="#">GitHub</a>
+        </div>
       </div>
-      <form method="dialog">
-        <button class="close">×</button>
-      </form>
+      <div class="label">
+          <form method="dialog">
+            <button class="close"><h3>X</h3></button>
+          </form>
+      </div>
     </div>
-    <div class="label"><h3>X</h3></div>
-  </div>
-</dialog>
+  </dialog>
+{% endfor %}

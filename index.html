@@ -460,7 +460,6 @@ main {
 .tech-border > .label {
   grid-area: 1/1/2/2;
   justify-self: end;
-  min-width: 50%;
   min-height: calc(var(--cs) * 2 + var(--bs));
 
   display: grid;
@@ -475,6 +474,10 @@ main {
     0 100%,
     0 var(--cs)
   );
+}
+
+.card > label {
+  min-width: 50%;
 }
 
 .label h3 {
@@ -579,23 +582,16 @@ main {
     max-width: none;
     margin: 24px;
     color: var(--white);
-/*
-    margin: 24px;
-    border: 2px solid var(--accent);
-    background: rgba(10, 10, 10, 0.8);
-    color: var(--white);
-    padding: 32px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 0 32px var(--accent);
-*/
   }
 
   dialog::backdrop {
     background: transparent;
     backdrop-filter: blur(12px);
-/*
-    background: rgba(0, 0, 0, 0.6);
-*/
+  }
+
+  .label button {
+    background: transparent;
+    border: none;
   }
 
 </style>
@@ -822,12 +818,18 @@ main {
                 
                   <h4>Shopify Development</h4>
                 
+                  <h4>Hydrogen</h4>
+                
+                  <h4>A11y | Google Analytics</h4>
+                
+                  <h4>Performance Optimization</h4>
+                
               </div>
               <div class="link">
                 <span>+ </span><span class="underline">Know more</span>
               </div>
             </div>
-            <div class="label"><h3>Decathlon</h3></div>
+            <div class="label"><h3>Decathlon USA</h3></div>
           </div>
         </div>
       
@@ -873,25 +875,88 @@ main {
   </section>
 </main>
 
-<dialog id="project-dialog">
-  <div class="tech-border">
-    <div class="tech-border-internal">
-      <h2>Decathlon</h2>
-      <p>Shopify theme for Decathlon USA.</p>
-      <ul class="tags">
-        <li>Liquid</li><li>Tailwind</li><li>A11y</li>
-      </ul>
-      <div class="actions">
-        <a href="#">Preview</a>
-        <a href="#">GitHub</a>
+
+  <dialog id="project-dialog">
+    <div class="tech-border">
+      <div class="tech-border-internal">
+        <h2>Decathlon USA</h2>
+        <h3>Senior Shopify Web Developer</h3>
+        
+          
+            <p>Dedicatedly working for the world's largest sporting goods retailer (Decathlon), focusing on its US operations. As the primary web developer for Shopify e-commerce operations, responsibilities spanned both the legacy Shopify Liquid Theme and the development of new storefronts using Shopify Online Store 2.0 and Hydrogen. My key contributions include:</p>
+          
+          
+        
+          
+          
+            <ul>
+              
+                <li>Implement new sites for Decathlon and Van Rysel Cycling.</li>
+              
+                <li>Deployed multiple site redesigns, features, and sections.</li>
+              
+                <li>Led performance optimization initiatives.</li>
+              
+                <li>Drove accessibility compliance through repeated audit and implementation cycles.</li>
+              
+                <li>Migrated the analytics stack to Google Analytics 4.</li>
+              
+                <li>Initiated the Hydrogen storefront development.</li>
+              
+            </ul>
+          
+        
+        <div class="actions">
+          <a href="#">Preview</a>
+          <a href="#">GitHub</a>
+        </div>
       </div>
-      <form method="dialog">
-        <button class="close">×</button>
-      </form>
+      <div class="label">
+          <form method="dialog">
+            <button class="close"><h3>X</h3></button>
+          </form>
+      </div>
     </div>
-    <div class="label"><h3>X</h3></div>
-  </div>
-</dialog>
+  </dialog>
+
+  <dialog id="project-dialog">
+    <div class="tech-border">
+      <div class="tech-border-internal">
+        <h2>TerraCotta Arte Sacra</h2>
+        <h3></h3>
+        
+        <div class="actions">
+          <a href="#">Preview</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+      <div class="label">
+          <form method="dialog">
+            <button class="close"><h3>X</h3></button>
+          </form>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="project-dialog">
+    <div class="tech-border">
+      <div class="tech-border-internal">
+        <h2>Pedro H Valladao</h2>
+        <h3></h3>
+        
+        <div class="actions">
+          <a href="#">Preview</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+      <div class="label">
+          <form method="dialog">
+            <button class="close"><h3>X</h3></button>
+          </form>
+      </div>
+    </div>
+  </dialog>
+
 
 <div class="footer"></div><!-- <script type="module" src="scripts/main.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
