@@ -12,17 +12,17 @@
     "content": [
       {
         "type": "p",
-        "data": "Dedicatedly working for the world's largest sporting goods retailer (Decathlon), focusing on its US operations. As the primary web developer for Shopify e-commerce operations, responsibilities spanned both the legacy Shopify Liquid Theme and the development of new storefronts using Shopify Online Store 2.0 and Hydrogen. My key contributions include:"
+        "data": "Dedicatedly working for the world's largest sporting goods retailer (Decathlon), focusing on its US operations. As the primary web developer for Shopify e‑commerce operations, responsibilities spanned both the legacy Shopify Liquid theme and the development of new storefronts using Online Store 2.0 and Hydrogen v2."
       },
       {
         "type": "list",
         "data": [
-          "Implement new sites for Decathlon and Van Rysel Cycling.",
-          "Deployed multiple site redesigns, features, and sections.",
-          "Led performance optimization initiatives.",
+          "Implemented new sites and brand storefronts (e.g., Van Rysel Cycling).",
+          "Deployed multiple redesigns, features, and sections.",
+          "Led performance optimization initiatives (LCP/CLS).",
           "Drove accessibility compliance through repeated audit and implementation cycles.",
-          "Migrated the analytics stack to Google Analytics 4.",
-          "Initiated the Hydrogen storefront development."
+          "Migrated the analytics stack to Google Analytics 4 with full e‑commerce events.",
+          "Initiated the Hydrogen v2 storefront and DS alignment."
         ]
       }
     ]
@@ -36,8 +36,8 @@
       {
         "type": "list",
         "data": [
-          "Led development of the e-commerce store using Shopify Liquid, HTML, CSS, and JavaScript.",
-          "Created an in-house ERP integrated with Shopify via API and webhooks.",
+          "Led development of the e‑commerce store using Shopify Liquid, HTML, CSS, and JavaScript.",
+          "Created an in‑house ERP integrated with Shopify via API and webhooks.",
           "Maintained multiple theme versions and implemented performance and SEO improvements.",
           "Technologies: PHP (CodeIgniter), Node.js, AngularJS, Vue.js, MySQL."
         ]
@@ -47,7 +47,22 @@
   {
     "id": "pedro-h-valladao",
     "label": "Pedro H Valladao",
-    "items": ["Composer Portfolio", "Next.js | TypeScript | Sanity.io"]
+    "items": ["Composer Portfolio", "Next.js | TypeScript | Sanity.io"],
+    "content": [
+      {
+        "type": "p",
+        "data": "A high‑performance portfolio for a music composer, built with a typed Next.js stack and a structured content model."
+      },
+      {
+        "type": "list",
+        "data": [
+          "Next.js + TypeScript with reusable UI components.",
+          "Sanity as headless CMS; GROQ queries and preview workflows.",
+          "Image optimization strategy and Core Web Vitals hardening.",
+          "Deployed with CI and environment separation for safe content publishing."
+        ]
+      }
+    ]
   },
   {
     "id": "perf-optimization",
@@ -67,11 +82,11 @@
           "Converted images to WebP and set responsive sizes.",
           "Removed CLS issues and minimized layout shifts.",
           "Deferred CSS and JavaScript with critical inline styles.",
-          "Prioritized font loading and reduced render-blocking assets.",
+          "Prioritized font loading and reduced render‑blocking assets.",
           "Established metrics tracking using Lighthouse and Chrome UX Report.",
-          "Improved liquid code based on Shopify Theme Check integration.",
+          "Improved Liquid code based on Shopify Theme Check integration.",
           "Refactored homepage, PDP, and navigation templates for LCP and CLS.",
-          "Deferred third-party scripts.",
+          "Deferred third‑party scripts.",
           "Improved preload logic and image prioritization."
         ]
       }

@@ -743,7 +743,7 @@ main {
         <div class="swiper-slide">
           <div
             class="tech-border card js-card"
-            >
+            id="card-shopify" data-dialog-id="shopify">
             <div class="tech-border-internal">
               <div class="card-content">
                 
@@ -767,7 +767,7 @@ main {
         <div class="swiper-slide">
           <div
             class="tech-border card js-card"
-            >
+            id="card-frontend" data-dialog-id="frontend">
             <div class="tech-border-internal">
               <div class="card-content">
                 
@@ -791,7 +791,7 @@ main {
         <div class="swiper-slide">
           <div
             class="tech-border card js-card"
-            >
+            id="card-performance" data-dialog-id="performance">
             <div class="tech-border-internal">
               <div class="card-content">
                 
@@ -918,14 +918,14 @@ main {
 </main>
 
 
-  <dialog class="project-dialog" id="dialog-decathlon-usa">
+  <dialog class="project-dialog" id="dialog-shopify">
     <div class="tech-border">
       <div class="tech-border-internal">
-        <h2>Decathlon USA</h2>
-        <h3>Senior Shopify Web Developer</h3>
+        <h2>Shopify Ecosystem</h2>
+        <h3></h3>
         
           
-            <p>Dedicatedly working for the world's largest sporting goods retailer (Decathlon), focusing on its US operations. As the primary web developer for Shopify e-commerce operations, responsibilities spanned both the legacy Shopify Liquid Theme and the development of new storefronts using Shopify Online Store 2.0 and Hydrogen. My key contributions include:</p>
+            <p>I build and evolve Shopify storefronts end‑to‑end — from custom Liquid themes to Hydrogen v2 (Remix) with Storefront API. My focus is maintainability, performance, and accessibility.</p>
           
           
         
@@ -933,17 +933,124 @@ main {
           
             <ul>
               
-                <li>Implement new sites for Decathlon and Van Rysel Cycling.</li>
+                <li>Custom theme development (Liquid, OS 2.0) and deep theme customization.</li>
               
-                <li>Deployed multiple site redesigns, features, and sections.</li>
+                <li>Checkout and delivery logic on Shopify Plus using Functions and metafields.</li>
               
-                <li>Led performance optimization initiatives.</li>
+                <li>App development when the theme layer isn’t enough (proxy apps, serverless endpoints).</li>
+              
+                <li>Headless storefronts with Hydrogen v2, aligned with design systems.</li>
+              
+            </ul>
+          
+        
+      </div>
+      <div class="label">
+          <form method="dialog">
+            <button class="close"><h3>X</h3></button>
+          </form>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="project-dialog" id="dialog-frontend">
+    <div class="tech-border">
+      <div class="tech-border-internal">
+        <h2>Frontend</h2>
+        <h3></h3>
+        
+          
+            <p>Modern React/TypeScript workflows with a strong emphasis on typed APIs, DX, and measurable outcomes (A11y, SEO, analytics quality).</p>
+          
+          
+        
+          
+          
+            <ul>
+              
+                <li>TypeScript + React component systems for scalable UIs.</li>
+              
+                <li>Next.js and Remix for content‑rich and headless experiences.</li>
+              
+                <li>GA4 migration and e‑commerce event models; validation with DebugView/Tag Assistant.</li>
+              
+                <li>WCAG‑oriented development and structured data for SEO.</li>
+              
+            </ul>
+          
+        
+      </div>
+      <div class="label">
+          <form method="dialog">
+            <button class="close"><h3>X</h3></button>
+          </form>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="project-dialog" id="dialog-performance">
+    <div class="tech-border">
+      <div class="tech-border-internal">
+        <h2>Performance</h2>
+        <h3></h3>
+        
+          
+            <p>Pragmatic performance passes focused on LCP, CLS and responsiveness, without breaking UX or delivery cadence.</p>
+          
+          
+        
+          
+          
+            <ul>
+              
+                <li>Responsive images, WebP/AVIF where applicable, prioritized loading.</li>
+              
+                <li>Inline critical CSS and defer/async of non‑critical assets.</li>
+              
+                <li>Stabilize layout (CLS) in carousels, navigation, and PDP.</li>
+              
+                <li>Continuous monitoring with Lighthouse and Chrome UX Report.</li>
+              
+            </ul>
+          
+        
+      </div>
+      <div class="label">
+          <form method="dialog">
+            <button class="close"><h3>X</h3></button>
+          </form>
+      </div>
+    </div>
+  </dialog>
+
+
+
+  <dialog class="project-dialog" id="dialog-decathlon-usa">
+    <div class="tech-border">
+      <div class="tech-border-internal">
+        <h2>Decathlon USA</h2>
+        <h3>Senior Shopify Web Developer</h3>
+        
+          
+            <p>Dedicatedly working for the world's largest sporting goods retailer (Decathlon), focusing on its US operations. As the primary web developer for Shopify e‑commerce operations, responsibilities spanned both the legacy Shopify Liquid theme and the development of new storefronts using Online Store 2.0 and Hydrogen v2.</p>
+          
+          
+        
+          
+          
+            <ul>
+              
+                <li>Implemented new sites and brand storefronts (e.g., Van Rysel Cycling).</li>
+              
+                <li>Deployed multiple redesigns, features, and sections.</li>
+              
+                <li>Led performance optimization initiatives (LCP/CLS).</li>
               
                 <li>Drove accessibility compliance through repeated audit and implementation cycles.</li>
               
-                <li>Migrated the analytics stack to Google Analytics 4.</li>
+                <li>Migrated the analytics stack to Google Analytics 4 with full e‑commerce events.</li>
               
-                <li>Initiated the Hydrogen storefront development.</li>
+                <li>Initiated the Hydrogen v2 storefront and DS alignment.</li>
               
             </ul>
           
@@ -967,9 +1074,9 @@ main {
           
             <ul>
               
-                <li>Led development of the e-commerce store using Shopify Liquid, HTML, CSS, and JavaScript.</li>
+                <li>Led development of the e‑commerce store using Shopify Liquid, HTML, CSS, and JavaScript.</li>
               
-                <li>Created an in-house ERP integrated with Shopify via API and webhooks.</li>
+                <li>Created an in‑house ERP integrated with Shopify via API and webhooks.</li>
               
                 <li>Maintained multiple theme versions and implemented performance and SEO improvements.</li>
               
@@ -992,6 +1099,26 @@ main {
       <div class="tech-border-internal">
         <h2>Pedro H Valladao</h2>
         <h3></h3>
+        
+          
+            <p>A high‑performance portfolio for a music composer, built with a typed Next.js stack and a structured content model.</p>
+          
+          
+        
+          
+          
+            <ul>
+              
+                <li>Next.js + TypeScript with reusable UI components.</li>
+              
+                <li>Sanity as headless CMS; GROQ queries and preview workflows.</li>
+              
+                <li>Image optimization strategy and Core Web Vitals hardening.</li>
+              
+                <li>Deployed with CI and environment separation for safe content publishing.</li>
+              
+            </ul>
+          
         
       </div>
       <div class="label">
@@ -1020,15 +1147,15 @@ main {
               
                 <li>Deferred CSS and JavaScript with critical inline styles.</li>
               
-                <li>Prioritized font loading and reduced render-blocking assets.</li>
+                <li>Prioritized font loading and reduced render‑blocking assets.</li>
               
                 <li>Established metrics tracking using Lighthouse and Chrome UX Report.</li>
               
-                <li>Improved liquid code based on Shopify Theme Check integration.</li>
+                <li>Improved Liquid code based on Shopify Theme Check integration.</li>
               
                 <li>Refactored homepage, PDP, and navigation templates for LCP and CLS.</li>
               
-                <li>Deferred third-party scripts.</li>
+                <li>Deferred third‑party scripts.</li>
               
                 <li>Improved preload logic and image prioritization.</li>
               
@@ -1063,7 +1190,7 @@ main {
         });
 
         /** @type {NodeListOf<HTMLDivElement>} */
-        const cards = document.querySelectorAll('#projects .js-card');
+        const cards = document.querySelectorAll('.js-card');
 
         cards.forEach((card) => {
           const dialogId = card.dataset.dialogId;

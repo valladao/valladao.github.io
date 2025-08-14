@@ -1,19 +1,72 @@
 [
   {
+    "id": "shopify",
     "label": "Shopify Ecosystem",
     "items": [
       "Theme Development",
       "Theme Customization",
       "App Development",
       "Hydrogen | Headless"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "data": "I build and evolve Shopify storefronts end‑to‑end — from custom Liquid themes to Hydrogen v2 (Remix) with Storefront API. My focus is maintainability, performance, and accessibility."
+      },
+      {
+        "type": "list",
+        "data": [
+          "Custom theme development (Liquid, OS 2.0) and deep theme customization.",
+          "Checkout and delivery logic on Shopify Plus using Functions and metafields.",
+          "App development when the theme layer isn’t enough (proxy apps, serverless endpoints).",
+          "Headless storefronts with Hydrogen v2, aligned with design systems."
+        ]
+      }
     ]
   },
   {
+    "id": "frontend",
     "label": "Frontend",
-    "items": ["Google Analytics", "Remix", "Next.js | TypeScript", "A11y | SEO"]
+    "items": [
+      "Google Analytics",
+      "Remix",
+      "Next.js | TypeScript",
+      "A11y | SEO"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "data": "Modern React/TypeScript workflows with a strong emphasis on typed APIs, DX, and measurable outcomes (A11y, SEO, analytics quality)."
+      },
+      {
+        "type": "list",
+        "data": [
+          "TypeScript + React component systems for scalable UIs.",
+          "Next.js and Remix for content‑rich and headless experiences.",
+          "GA4 migration and e‑commerce event models; validation with DebugView/Tag Assistant.",
+          "WCAG‑oriented development and structured data for SEO."
+        ]
+      }
+    ]
   },
   {
+    "id": "performance",
     "label": "Performance",
-    "items": ["Image Optimization", "Core Web Vitals"]
+    "items": ["Image Optimization", "Core Web Vitals"],
+    "content": [
+      {
+        "type": "p",
+        "data": "Pragmatic performance passes focused on LCP, CLS and responsiveness, without breaking UX or delivery cadence."
+      },
+      {
+        "type": "list",
+        "data": [
+          "Responsive images, WebP/AVIF where applicable, prioritized loading.",
+          "Inline critical CSS and defer/async of non‑critical assets.",
+          "Stabilize layout (CLS) in carousels, navigation, and PDP.",
+          "Continuous monitoring with Lighthouse and Chrome UX Report."
+        ]
+      }
+    ]
   }
 ]
