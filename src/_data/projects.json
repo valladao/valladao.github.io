@@ -30,11 +30,51 @@
   {
     "id": "terracotta-arte-sacra",
     "label": "TerraCotta Arte Sacra",
-    "items": ["Full Stack System Development"]
+    "jobPosition": "Senior Shopify Web Developer",
+    "items": ["Full Stack System Development"],
+    "content": [
+      {
+        "type": "list",
+        "data": [
+          "Led development of the e-commerce store using Shopify Liquid, HTML, CSS, and JavaScript.",
+          "Created an in-house ERP integrated with Shopify via API and webhooks.",
+          "Maintained multiple theme versions and implemented performance and SEO improvements.",
+          "Technologies: PHP (CodeIgniter), Node.js, AngularJS, Vue.js, MySQL."
+        ]
+      }
+    ]
   },
   {
     "id": "pedro-h-valladao",
     "label": "Pedro H Valladao",
     "items": ["Composer Portfolio", "Next.js | TypeScript | Sanity.io"]
+  },
+  {
+    "id": "perf-optimization",
+    "label": "Performance Optimization",
+    "items": [
+      "Core Web Vitals",
+      "Image Optimization",
+      "Critical rendering path",
+      "CSS & JS Optimization",
+      "Metrics Tracking"
+    ],
+    "content": [
+      {
+        "type": "list",
+        "data": [
+          "Deferred offscreen images with lazy loading.",
+          "Converted images to WebP and set responsive sizes.",
+          "Removed CLS issues and minimized layout shifts.",
+          "Deferred CSS and JavaScript with critical inline styles.",
+          "Prioritized font loading and reduced render-blocking assets.",
+          "Established metrics tracking using Lighthouse and Chrome UX Report.",
+          "Improved liquid code based on Shopify Theme Check integration.",
+          "Refactored homepage, PDP, and navigation templates for LCP and CLS.",
+          "Deferred third-party scripts.",
+          "Improved preload logic and image prioritization."
+        ]
+      }
+    ]
   }
 ]
