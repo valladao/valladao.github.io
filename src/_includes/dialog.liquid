@@ -1,12 +1,15 @@
 {%- comment -%} Before release, remove these | include in project {%- endcomment -%}
 {%- comment %} theme-check-disable UndefinedObject {%- endcomment -%}
 {% for dialog in dialogs %}
-  <dialog class="project-dialog" id="dialog-{{ dialog.id }}">
+  <dialog class="dialog" id="dialog-{{ dialog.id }}">
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>{{ dialog.label }}</h2>
         <h3>{{ dialog.jobPosition }}</h3>
         {% for section in dialog.content %}
+          {% if section.type == "h4" %}
+            <h4>{{ section.data }}</h4>
+          {% endif %}
           {% if section.type == "p" %}
             <p>{{ section.data }}</p>
           {% endif %}

@@ -11,16 +11,35 @@
     "content": [
       {
         "type": "p",
-        "data": "I build and evolve Shopify storefronts end‑to‑end — from custom Liquid themes to Hydrogen v2 (Remix) with Storefront API. My focus is maintainability, performance, and accessibility."
+        "data": "I have been working with Shopify since 2009, shortly after the platform’s launch, building a solid foundation of knowledge across its entire ecosystem."
       },
       {
-        "type": "list",
-        "data": [
-          "Custom theme development (Liquid, OS 2.0) and deep theme customization.",
-          "Checkout and delivery logic on Shopify Plus using Functions and metafields.",
-          "App development when the theme layer isn’t enough (proxy apps, serverless endpoints).",
-          "Headless storefronts with Hydrogen v2, aligned with design systems."
-        ]
+        "type": "h4",
+        "data": "Theme development using Liquid, OS 2.0, and best practices."
+      },
+      {
+        "type": "h4",
+        "data": "Advanced theme customization for unique business requirements."
+      },
+      {
+        "type": "p",
+        "data": "Over the years, I have developed fully custom themes from scratch as well as extensively customized existing themes to meet specific business needs."
+      },
+      {
+        "type": "h4",
+        "data": "Custom app creation and third-party integrations."
+      },
+      {
+        "type": "p",
+        "data": "Beyond themes, I have created new sections and components to enhance existing stores, built custom Shopify apps, and integrated external services through APIs and webhooks."
+      },
+      {
+        "type": "h4",
+        "data": "Headless storefront development with Hydrogen v2 (Remix)."
+      },
+      {
+        "type": "p",
+        "data": "I also have hands-on experience with Hydrogen for headless storefronts, combining Shopify Storefront API with modern frameworks to deliver fast and flexible user experiences."
       }
     ]
   },
