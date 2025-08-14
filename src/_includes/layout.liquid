@@ -57,23 +57,25 @@
           },
         });
 
-        /** @type {HTMLDialogElement|null} */
-        const dialog = document.getElementById('project-dialog');
-        const cards = document.querySelectorAll('.js-card');
+        /** @type {NodeListOf<HTMLDivElement>} */
+        const cards = document.querySelectorAll('#projects .js-card');
 
-        if (dialog) {
+        cards.forEach((card) => {
+          const dialogId = card.dataset.dialogId;
+          if (!dialogId) return;
+          const dialog = document.getElementById(`dialog-${dialogId}`);
+          if (!dialog) return;
+
           const closeBtn = dialog.querySelector('.close');
 
-          cards.forEach(card => {
-            card.addEventListener('click', () => {
-              if ('showModal' in dialog) dialog.showModal();
-            });
+          card.addEventListener('click', () => {
+            if ('showModal' in dialog) dialog.showModal();
           });
 
           closeBtn && closeBtn.addEventListener('click', () => {
             dialog.close();
           });
-        }
+        });
       });
     </script>
 

@@ -737,7 +737,9 @@ main {
     <div class="swiper-wrapper">
       
         <div class="swiper-slide">
-          <div class="tech-border card js-card">
+          <div
+            class="tech-border card js-card"
+            >
             <div class="tech-border-internal">
               <div class="card-content">
                 
@@ -759,7 +761,9 @@ main {
         </div>
       
         <div class="swiper-slide">
-          <div class="tech-border card js-card">
+          <div
+            class="tech-border card js-card"
+            >
             <div class="tech-border-internal">
               <div class="card-content">
                 
@@ -781,7 +785,9 @@ main {
         </div>
       
         <div class="swiper-slide">
-          <div class="tech-border card js-card">
+          <div
+            class="tech-border card js-card"
+            >
             <div class="tech-border-internal">
               <div class="card-content">
                 
@@ -812,7 +818,9 @@ main {
     <div class="swiper-wrapper">
       
         <div class="swiper-slide">
-          <div class="tech-border card js-card">
+          <div
+            class="tech-border card js-card"
+            id="card-decathlon-usa" data-dialog-id="decathlon-usa">
             <div class="tech-border-internal">
               <div class="card-content">
                 
@@ -834,7 +842,9 @@ main {
         </div>
       
         <div class="swiper-slide">
-          <div class="tech-border card js-card">
+          <div
+            class="tech-border card js-card"
+            id="card-terracotta-arte-sacra" data-dialog-id="terracotta-arte-sacra">
             <div class="tech-border-internal">
               <div class="card-content">
                 
@@ -850,7 +860,9 @@ main {
         </div>
       
         <div class="swiper-slide">
-          <div class="tech-border card js-card">
+          <div
+            class="tech-border card js-card"
+            id="card-pedro-h-valladao" data-dialog-id="pedro-h-valladao">
             <div class="tech-border-internal">
               <div class="card-content">
                 
@@ -876,7 +888,7 @@ main {
 </main>
 
 
-  <dialog id="project-dialog">
+  <dialog class="project-dialog" id="dialog-decathlon-usa">
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Decathlon USA</h2>
@@ -919,7 +931,7 @@ main {
     </div>
   </dialog>
 
-  <dialog id="project-dialog">
+  <dialog class="project-dialog" id="dialog-terracotta-arte-sacra">
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>TerraCotta Arte Sacra</h2>
@@ -938,7 +950,7 @@ main {
     </div>
   </dialog>
 
-  <dialog id="project-dialog">
+  <dialog class="project-dialog" id="dialog-pedro-h-valladao">
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Pedro H Valladao</h2>
@@ -975,23 +987,25 @@ main {
           },
         });
 
-        /** @type {HTMLDialogElement|null} */
-        const dialog = document.getElementById('project-dialog');
-        const cards = document.querySelectorAll('.js-card');
+        /** @type {NodeListOf<HTMLDivElement>} */
+        const cards = document.querySelectorAll('#projects .js-card');
 
-        if (dialog) {
+        cards.forEach((card) => {
+          const dialogId = card.dataset.dialogId;
+          if (!dialogId) return;
+          const dialog = document.getElementById(`dialog-${dialogId}`);
+          if (!dialog) return;
+
           const closeBtn = dialog.querySelector('.close');
 
-          cards.forEach(card => {
-            card.addEventListener('click', () => {
-              if ('showModal' in dialog) dialog.showModal();
-            });
+          card.addEventListener('click', () => {
+            if ('showModal' in dialog) dialog.showModal();
           });
 
           closeBtn && closeBtn.addEventListener('click', () => {
             dialog.close();
           });
-        }
+        });
       });
     </script>
 

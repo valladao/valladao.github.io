@@ -1,5 +1,6 @@
 [
   {
+    "id": "decathlon-usa",
     "label": "Decathlon USA",
     "jobPosition": "Senior Shopify Web Developer",
     "items": [
@@ -27,10 +28,12 @@
     ]
   },
   {
+    "id": "terracotta-arte-sacra",
     "label": "TerraCotta Arte Sacra",
     "items": ["Full Stack System Development"]
   },
   {
+    "id": "pedro-h-valladao",
     "label": "Pedro H Valladao",
     "items": ["Composer Portfolio", "Next.js | TypeScript | Sanity.io"]
   }

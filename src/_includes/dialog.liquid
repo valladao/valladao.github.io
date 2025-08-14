@@ -1,7 +1,7 @@
 {%- comment -%} Before release, remove these | include in project {%- endcomment -%}
 {%- comment %} theme-check-disable UndefinedObject {%- endcomment -%}
 {% for dialog in dialogs %}
-  <dialog id="project-dialog">
+  <dialog class="project-dialog" id="dialog-{{ dialog.id }}">
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>{{ dialog.label }}</h2>
