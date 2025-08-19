@@ -13,20 +13,29 @@
         "type": "p",
         "data": "I have been working with Shopify since 2009, shortly after the platform’s launch, building a solid foundation of knowledge across its entire ecosystem."
       },
-      {
-        "type": "h4",
-        "data": "Theme development using Liquid, OS 2.0, and best practices."
-      },
-      {
-        "type": "h4",
-        "data": "Advanced theme customization for unique business requirements."
-      },
+
       {
         "type": "p",
         "data": "Over the years, I have developed fully custom themes from scratch as well as extensively customized existing themes to meet specific business needs."
       },
       {
         "type": "h4",
+        "data": "Theme Development"
+      },
+      {
+        "type": "h4",
+        "data": "Theme Customization"
+      },
+      {
+        "type": "p",
+        "data": "Advanced theme customization for unique business requirements."
+      },
+      {
+        "type": "h4",
+        "data": "App Development"
+      },
+      {
+        "type": "p",
         "data": "Custom app creation and third-party integrations."
       },
       {
@@ -35,11 +44,23 @@
       },
       {
         "type": "h4",
-        "data": "Headless storefront development with Hydrogen v2 (Remix)."
+        "data": "Store Speed and Optimization"
+      },
+      {
+        "type": "h4",
+        "data": "Hydrogen | Headless"
       },
       {
         "type": "p",
         "data": "I also have hands-on experience with Hydrogen for headless storefronts, combining Shopify Storefront API with modern frameworks to deliver fast and flexible user experiences."
+      },
+      {
+        "type": "p",
+        "data": "Headless storefront development with Hydrogen v2 (Remix)."
+      },
+      {
+        "type": "h4",
+        "data": "Senior Shopify Consulting & Mentoring"
       }
     ]
   },
