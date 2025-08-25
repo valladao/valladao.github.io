@@ -68,12 +68,32 @@
     "id": "frontend",
     "label": "Frontend",
     "items": [
-      "Google Analytics",
-      "Remix",
       "Next.js | TypeScript",
+      "Remix",
+      "Google Analytics",
       "A11y | SEO"
     ],
     "content": [
+      {
+        "type": "h4",
+        "data": "JavaScript/TypeScript Development"
+      },
+      {
+        "type": "p",
+        "data": "My JavaScript journey began long before modern frameworks: At **TerraCotta Arte Sacra**, I built a custom ERP integrated with Shopify APIs. Across three major versions, I transitioned from **PHP + jQuery** to **AngularJS**, and finally to a **Node.js + Vue.js full-stack architecture**. This laid the foundation for my deep expertise in integration, API design, and full-stack JavaScript."
+      },
+      {
+        "type": "p",
+        "data": "At **Decathlon USA**, I further broadened my skills by working with **Vue.js** and **Preact** on specific features, while deeply embedding myself in **React + TypeScript** ecosystems via **Hydrogen v2 (Remix)** and **Next.js**. I also led performance improvements (Core Web Vitals), accessibility (WCAG), and caching strategies for enterprise-scale storefronts."
+      },
+      {
+        "type": "p",
+        "data": "My personal project, **[Pedro Portfolio](https://github.com/valladao/pedro-portfolio)**, is a **Next.js + TypeScript** application styled with **CSS Modules**, the component-scoped styling approach native to Next.js. This ensures clean, maintainable, and conflict-free styles while keeping performance and accessibility as top priorities."
+      },
+      {
+        "type": "p",
+        "data": "**In summary:** my JavaScript experience spans over a decade—from ERP full-stack systems to headless Shopify storefronts. Today, I specialize in **React, TypeScript, Hydrogen/Remix**, and modern styling approaches such as **CSS Modules** and **Tailwind CSS**, delivering accessible, scalable, and high-performance frontends aligned with Shopify’s modern stack."
+      },
       {
         "type": "p",
         "data": "Modern React/TypeScript workflows with a strong emphasis on typed APIs, DX, and measurable outcomes (A11y, SEO, analytics quality)."
