@@ -1,130 +1,180 @@
 [
   {
-    "id": "shopify",
-    "label": "Shopify Ecosystem",
+    "id": "shopify-platform",
+    "label": "Shopify Platform",
     "items": [
-      "Theme Development",
-      "Theme Customization",
-      "App Development",
+      "Theme Develop | Liquid",
+      "Online Store 2.0",
+      "GraphQL | App Develop",
+      "Admin | Storefront API",
       "Hydrogen | Headless"
     ],
     "content": [
       {
         "type": "p",
-        "data": "I have been working with Shopify since 2009, shortly after the platform’s launch, building a solid foundation of knowledge across its entire ecosystem."
+        "data": "I have been working with Shopify since 2009, covering the platform evolution from classic theme development to modern Online Store 2.0 and headless initiatives."
       },
-
       {
         "type": "p",
-        "data": "Over the years, I have developed fully custom themes from scratch as well as extensively customized existing themes to meet specific business needs."
+        "data": "My work combines technical depth and business focus: conversion-critical storefront experiences, maintainable architecture, and integration-ready foundations for growth."
       },
       {
         "type": "h4",
-        "data": "Theme Development"
-      },
-      {
-        "type": "h4",
-        "data": "Theme Customization"
-      },
-      {
-        "type": "p",
-        "data": "Advanced theme customization for unique business requirements."
-      },
-      {
-        "type": "h4",
-        "data": "App Development"
-      },
-      {
-        "type": "p",
-        "data": "Custom app creation and third-party integrations."
-      },
-      {
-        "type": "p",
-        "data": "Beyond themes, I have created new sections and components to enhance existing stores, built custom Shopify apps, and integrated external services through APIs and webhooks."
-      },
-      {
-        "type": "h4",
-        "data": "Store Speed and Optimization"
-      },
-      {
-        "type": "h4",
-        "data": "Hydrogen | Headless"
-      },
-      {
-        "type": "p",
-        "data": "I also have hands-on experience with Hydrogen for headless storefronts, combining Shopify Storefront API with modern frameworks to deliver fast and flexible user experiences."
-      },
-      {
-        "type": "p",
-        "data": "Headless storefront development with Hydrogen v2 (Remix)."
-      },
-      {
-        "type": "h4",
-        "data": "Senior Shopify Consulting & Mentoring"
-      }
-    ]
-  },
-  {
-    "id": "frontend",
-    "label": "Frontend",
-    "items": [
-      "Next.js | TypeScript",
-      "Remix",
-      "Google Analytics",
-      "A11y | SEO"
-    ],
-    "content": [
-      {
-        "type": "h4",
-        "data": "JavaScript/TypeScript Development"
-      },
-      {
-        "type": "p",
-        "data": "My JavaScript journey began long before modern frameworks: At **TerraCotta Arte Sacra**, I built a custom ERP integrated with Shopify APIs. Across three major versions, I transitioned from **PHP + jQuery** to **AngularJS**, and finally to a **Node.js + Vue.js full-stack architecture**. This laid the foundation for my deep expertise in integration, API design, and full-stack JavaScript."
-      },
-      {
-        "type": "p",
-        "data": "At **Decathlon USA**, I further broadened my skills by working with **Vue.js** and **Preact** on specific features, while deeply embedding myself in **React + TypeScript** ecosystems via **Hydrogen v2 (Remix)** and **Next.js**. I also led performance improvements (Core Web Vitals), accessibility (WCAG), and caching strategies for enterprise-scale storefronts."
-      },
-      {
-        "type": "p",
-        "data": "My personal project, **[Pedro Portfolio](https://github.com/valladao/pedro-portfolio)**, is a **Next.js + TypeScript** application styled with **CSS Modules**, the component-scoped styling approach native to Next.js. This ensures clean, maintainable, and conflict-free styles while keeping performance and accessibility as top priorities."
-      },
-      {
-        "type": "p",
-        "data": "**In summary:** my JavaScript experience spans over a decade—from ERP full-stack systems to headless Shopify storefronts. Today, I specialize in **React, TypeScript, Hydrogen/Remix**, and modern styling approaches such as **CSS Modules** and **Tailwind CSS**, delivering accessible, scalable, and high-performance frontends aligned with Shopify’s modern stack."
-      },
-      {
-        "type": "p",
-        "data": "Modern React/TypeScript workflows with a strong emphasis on typed APIs, DX, and measurable outcomes (A11y, SEO, analytics quality)."
+        "data": "Theme Architecture & Delivery"
       },
       {
         "type": "list",
         "data": [
-          "TypeScript + React component systems for scalable UIs.",
-          "Next.js and Remix for content‑rich and headless experiences.",
-          "GA4 migration and e‑commerce event models; validation with DebugView/Tag Assistant.",
-          "WCAG‑oriented development and structured data for SEO."
+          "Built and evolved scalable Shopify themes using maintainable Liquid patterns and reusable section-based structures.",
+          "Delivered conversion-focused features across PDP, cart, listing, and merchandising experiences.",
+          "Supported continuous release cycles with iterative fixes, quality hardening, and production stability."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Platform Integrations"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Implemented storefront and backoffice integrations through Storefront/Admin APIs and webhook-driven workflows.",
+          "Connected Shopify experiences with analytics, subscription, and operational flows where required by the business.",
+          "Balanced implementation speed with long-term maintainability and data consistency."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Headless Readiness"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Contributed to Hydrogen/headless initiatives in enterprise contexts when the business case justified added complexity.",
+          "Worked with modern frontend stacks while preserving Shopify-native strengths for hybrid architectures.",
+          "Focused on practical adoption paths instead of premature migration."
         ]
       }
     ]
   },
   {
-    "id": "performance",
-    "label": "Performance",
-    "items": ["Image Optimization", "Core Web Vitals"],
+    "id": "performance-a11y",
+    "label": "Performance & A11y",
+    "items": [
+      "Core Web Vitals",
+      "PageSpeed | Lighthouse",
+      "Image Optimization",
+      "CSS/JS Optimization",
+      "WCAG | ARIA"
+    ],
     "content": [
       {
         "type": "p",
-        "data": "Pragmatic performance passes focused on LCP, CLS and responsiveness, without breaking UX or delivery cadence."
+        "data": "Performance and accessibility are treated as continuous engineering practices embedded in delivery, QA, and post-release validation."
+      },
+      {
+        "type": "p",
+        "data": "In enterprise Shopify environments, I prioritize real user experience on critical journeys (homepage, PDP, cart, navigation), balancing speed, stability, and usability."
+      },
+      {
+        "type": "h4",
+        "data": "Performance Execution"
       },
       {
         "type": "list",
         "data": [
-          "Responsive images, WebP/AVIF where applicable, prioritized loading.",
-          "Inline critical CSS and defer/async of non‑critical assets.",
-          "Stabilize layout (CLS) in carousels, navigation, and PDP.",
-          "Continuous monitoring with Lighthouse and Chrome UX Report."
+          "LCP/CLS optimization through rendering strategy, asset prioritization, and template refactoring.",
+          "Image optimization with responsive sizing and modern formats where applicable.",
+          "Critical CSS prioritization, defer/async for non-critical assets, and reduced render-blocking paths.",
+          "Third-party script control to protect Core Web Vitals and interaction responsiveness."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Accessibility Implementation"
+      },
+      {
+        "type": "list",
+        "data": [
+          "WCAG/ARIA-oriented implementation cycles across PDP, navigation, forms, and interactive content.",
+          "Focus management, keyboard navigation, semantic structure, and robust states for reusable components.",
+          "Iterative fixes integrated into PR workflow to avoid accessibility debt accumulation."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Measurement & Validation"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Continuous validation with Lighthouse and field signals from Chrome UX Report.",
+          "Regression-oriented checks after releases to keep quality stable under fast delivery cycles.",
+          "Data-informed prioritization of improvements by effort vs user impact."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "integrations-analytics",
+    "label": "Integrations & Analytics",
+    "items": [
+      "REST | GraphQL APIs",
+      "Webhooks",
+      "GA4 & Event Tracking",
+      "Recharge-related Flows"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "data": "Integration and tracking work aimed at reliable operations, measurable outcomes, and cleaner decision-making."
+      },
+      {
+        "type": "list",
+        "data": [
+          "API and webhook integrations across storefront and business workflows.",
+          "GA4 migration and e-commerce event quality validation.",
+          "Subscription/bundle flow adjustments in collaboration with product and business needs."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "frontend-engineering",
+    "label": "Frontend Engineering",
+    "items": [
+      "TypeScript | React",
+      "Remix | Next.js",
+      "Tailwind | CSS Modules",
+      "Semantic HTML | SEO"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "data": "Across enterprise Shopify engagements, I have consistently worked on conversion-critical surfaces (PDP, cart, listing, navigation), balancing release speed with quality and maintainability."
+      },
+      {
+        "type": "h4",
+        "data": "Frameworks & Delivery"
+      },
+      {
+        "type": "list",
+        "data": [
+          "React + TypeScript implementation patterns for scalable storefront features.",
+          "Remix and Next.js usage in headless and content-driven scenarios.",
+          "Tailwind CSS adoption for fast, maintainable UI delivery.",
+          "Feature delivery cycles for high-change e-commerce environments."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Frontend Quality & SEO"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Semantic HTML implementation for maintainable, scalable storefront markup.",
+          "Technical SEO support through robust structure, metadata, and crawl-friendly templates.",
+          "Styling workflows using Tailwind CSS and CSS Modules when project context requires."
         ]
       }
     ]

@@ -1,28 +1,139 @@
 [
   {
-    "id": "decathlon-usa",
-    "label": "Decathlon USA",
+    "id": "native-cos-pg-beauty-dtc",
+    "label": "Native Cos",
     "jobPosition": "Senior Shopify Web Developer",
     "items": [
-      "Shopify Development",
-      "Hydrogen",
-      "A11y | Google Analytics",
-      "Performance Optimization"
+      "Shopify Build-to-Launch",
+      "Scroll Animation",
+      "PDP | Cart | Variant Listing",
+      "A11y | Mobile | Conversion"
     ],
     "content": [
       {
         "type": "p",
-        "data": "Dedicatedly working for the world's largest sporting goods retailer (Decathlon), focusing on its US operations. As the primary web developer for Shopify e‑commerce operations, responsibilities spanned both the legacy Shopify Liquid theme and the development of new storefronts using Online Store 2.0 and Hydrogen v2."
+        "data": "At BairesDev, I joined Native Cos during the build phase of a new Shopify storefront and contributed through go-live and post-launch iterations."
+      },
+      {
+        "type": "p",
+        "data": "The scope combined fast feature delivery with production hardening across conversion-critical surfaces, especially for mobile traffic and recurring merchandising updates."
+      },
+      {
+        "type": "h4",
+        "data": "Build-to-Launch Delivery"
       },
       {
         "type": "list",
         "data": [
-          "Implemented new sites and brand storefronts (e.g., Van Rysel Cycling).",
-          "Deployed multiple redesigns, features, and sections.",
-          "Led performance optimization initiatives (LCP/CLS).",
-          "Drove accessibility compliance through repeated audit and implementation cycles.",
-          "Migrated the analytics stack to Google Analytics 4 with full e‑commerce events.",
-          "Initiated the Hydrogen v2 storefront and DS alignment."
+          "Delivered 70+ pull requests in a ~5-month cycle.",
+          "Built a scroll-animation-driven section for landing experiences.",
+          "Implemented and refined PDP, cart, variant listing, and scent-related experiences.",
+          "Shipped iterative enhancements from early build stages through production release."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Conversion & Commerce Flows"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Improved bundle/subscription-related flows, including Recharge-related journeys.",
+          "Adjusted pricing, product-card behavior, and variant presentation for clearer purchase paths.",
+          "Supported merchandising-focused updates with quick turnaround and consistent QA."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Stability & Experience Quality"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Delivered repeated mobile and Safari/iOS fixes across key storefront interactions.",
+          "Applied iterative accessibility improvements in navigation and product-focused modules.",
+          "Balanced release speed with maintainability in a high-change production environment."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "decathlon-usa",
+    "label": "Decathlon USA",
+    "jobPosition": "Senior Shopify Web Developer",
+    "items": [
+      "Enterprise Shopify Operations",
+      "OS 2.0 | Liquid | Hydrogen",
+      "Performance & A11y",
+      "GA4 Migration"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "data": "For over four years, I worked as the primary Shopify web developer for Decathlon US operations, covering both day-to-day delivery and long-term technical evolution."
+      },
+      {
+        "type": "p",
+        "data": "The role required balancing enterprise reliability with continuous feature velocity across storefront architecture, performance, accessibility, analytics, and brand-driven UX changes."
+      },
+      {
+        "type": "h4",
+        "data": "Storefront Evolution"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Implemented new storefronts and large redesign cycles in a high-traffic retail context.",
+          "Built and evolved PDP, homepage, navigation, and content sections across recurring release cycles.",
+          "Supported brand-specific adaptations, including Van Rysel storefront requirements."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Performance & Accessibility Programs"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Led Core Web Vitals initiatives with ongoing optimization passes for LCP/CLS and rendering behavior.",
+          "Implemented accessibility improvement cycles across carousels, menus, forms, and PDP components.",
+          "Integrated quality checks into development flow to maintain standards during fast delivery."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Data, Integrations & Modernization"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Migrated analytics to GA4 with e-commerce event validation and tracking consistency controls.",
+          "Contributed to Hydrogen v2 setup, tooling, and initial design-system alignment.",
+          "Implemented Shopify Function-based customizations and integration-oriented enhancements when required."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "van-rysel-cycling",
+    "label": "Van Rysel Cycling",
+    "jobPosition": "Shopify Web Developer",
+    "items": [
+      "Brand Storefront Adaptation",
+      "PDP Customization",
+      "Metafield-driven Content"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "data": "Within the Decathlon ecosystem, I adapted theme architecture for Van Rysel's brand and product experience requirements."
+      },
+      {
+        "type": "list",
+        "data": [
+          "Customized PDP and navigation behaviors for cycling-specific use cases.",
+          "Implemented geometry/size related UX components.",
+          "Expanded metafield-driven content for maintainable merchandising."
         ]
       }
     ]
@@ -30,16 +141,55 @@
   {
     "id": "terracotta-arte-sacra",
     "label": "TerraCotta Arte Sacra",
-    "jobPosition": "Senior Shopify Web Developer",
-    "items": ["Full Stack System Development"],
+    "jobPosition": "Full Stack Web Developer",
+    "items": [
+      "Shopify + ERP Integration",
+      "Theme Development",
+      "PHP | Node.js | Vue.js | MySQL"
+    ],
     "content": [
+      {
+        "type": "p",
+        "data": "For around a decade, I led full stack development efforts for TerraCotta, combining storefront growth, internal system development, and operational integration with Shopify."
+      },
+      {
+        "type": "p",
+        "data": "This was a long-cycle product environment where I worked across architecture, implementation, and business-critical workflows from end to end."
+      },
+      {
+        "type": "h4",
+        "data": "Storefront & Product Evolution"
+      },
       {
         "type": "list",
         "data": [
-          "Led development of the e‑commerce store using Shopify Liquid, HTML, CSS, and JavaScript.",
-          "Created an in‑house ERP integrated with Shopify via API and webhooks.",
-          "Maintained multiple theme versions and implemented performance and SEO improvements.",
-          "Technologies: PHP (CodeIgniter), Node.js, AngularJS, Vue.js, MySQL."
+          "Led Shopify theme development and continuous storefront evolution across multiple versions.",
+          "Implemented recurring UX, SEO, and performance improvements for conversion and maintainability.",
+          "Handled feature delivery from backlog definition to production rollout."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "ERP & Operational Integration"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Built an in-house ERP integrated with Shopify APIs and webhook-driven synchronization flows.",
+          "Supported core business operations such as product, order, and stock-related processes.",
+          "Created internal workflows to reduce manual operations and improve data consistency."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Technical Trajectory"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Evolved stack decisions over time based on business maturity and maintainability needs.",
+          "Worked across PHP, Node.js, Vue.js, and MySQL in long-term production contexts.",
+          "Maintained multi-version architecture while keeping delivery cadence and system reliability."
         ]
       }
     ]
@@ -47,47 +197,22 @@
   {
     "id": "pedro-h-valladao",
     "label": "Pedro H Valladao",
-    "items": ["Composer Portfolio", "Next.js | TypeScript | Sanity.io"],
+    "items": [
+      "Next.js | TypeScript",
+      "Sanity CMS",
+      "Performance-focused Frontend"
+    ],
     "content": [
       {
         "type": "p",
-        "data": "A high‑performance portfolio for a music composer, built with a typed Next.js stack and a structured content model."
+        "data": "A portfolio platform for a music composer, built with a typed Next.js stack and a structured content model."
       },
       {
         "type": "list",
         "data": [
-          "Next.js + TypeScript with reusable UI components.",
-          "Sanity as headless CMS; GROQ queries and preview workflows.",
-          "Image optimization strategy and Core Web Vitals hardening.",
-          "Deployed with CI and environment separation for safe content publishing."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "perf-optimization",
-    "label": "Performance Optimization",
-    "items": [
-      "Core Web Vitals",
-      "Image Optimization",
-      "Critical rendering path",
-      "CSS & JS Optimization",
-      "Metrics Tracking"
-    ],
-    "content": [
-      {
-        "type": "list",
-        "data": [
-          "Deferred offscreen images with lazy loading.",
-          "Converted images to WebP and set responsive sizes.",
-          "Removed CLS issues and minimized layout shifts.",
-          "Deferred CSS and JavaScript with critical inline styles.",
-          "Prioritized font loading and reduced render‑blocking assets.",
-          "Established metrics tracking using Lighthouse and Chrome UX Report.",
-          "Improved Liquid code based on Shopify Theme Check integration.",
-          "Refactored homepage, PDP, and navigation templates for LCP and CLS.",
-          "Deferred third‑party scripts.",
-          "Improved preload logic and image prioritization."
+          "Reusable components with Next.js + TypeScript.",
+          "Sanity-powered content workflows and preview support.",
+          "Performance and accessibility optimization as baseline quality requirements."
         ]
       }
     ]
