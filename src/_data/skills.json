@@ -57,23 +57,64 @@
     ]
   },
   {
-    "id": "performance-a11y",
-    "label": "Performance & A11y",
+    "id": "web-developer",
+    "label": "Web Developer",
+    "items": [
+      "TypeScript | React",
+      "Remix | Next.js",
+      "Tailwind | CSS Modules",
+      "Web Components"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "data": "Across enterprise Shopify engagements, I have consistently worked on conversion-critical surfaces (PDP, cart, listing, navigation), balancing release speed with quality and maintainability."
+      },
+      {
+        "type": "h4",
+        "data": "Frontend Build & Delivery"
+      },
+      {
+        "type": "list",
+        "data": [
+          "React + TypeScript implementation patterns for scalable storefront features.",
+          "Remix and Next.js usage in headless and content-driven scenarios.",
+          "Feature delivery cycles for high-change e-commerce environments.",
+          "Component-level implementation for reusable storefront sections and interactive UI modules."
+        ]
+      },
+      {
+        "type": "h4",
+        "data": "Styling & UI Systems"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Tailwind CSS adoption for fast, maintainable UI delivery.",
+          "CSS Modules workflows for scoped styling in Next.js projects.",
+          "Web components and section-based patterns applied to modular storefront development."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "web-performance",
+    "label": "Web Performance",
     "items": [
       "Core Web Vitals",
       "PageSpeed | Lighthouse",
       "Image Optimization",
       "CSS/JS Optimization",
-      "WCAG | ARIA"
+      "CrUX Monitoring"
     ],
     "content": [
       {
         "type": "p",
-        "data": "Performance and accessibility are treated as continuous engineering practices embedded in delivery, QA, and post-release validation."
+        "data": "Performance is handled as a continuous engineering practice embedded in delivery, QA, and post-release validation."
       },
       {
         "type": "p",
-        "data": "In enterprise Shopify environments, I prioritize real user experience on critical journeys (homepage, PDP, cart, navigation), balancing speed, stability, and usability."
+        "data": "In enterprise Shopify environments, I prioritize real user experience on critical journeys (homepage, PDP, cart, navigation), balancing speed and stability."
       },
       {
         "type": "h4",
@@ -90,6 +131,34 @@
       },
       {
         "type": "h4",
+        "data": "Measurement & Validation"
+      },
+      {
+        "type": "list",
+        "data": [
+          "Continuous validation with Lighthouse and field signals from Chrome UX Report.",
+          "Regression-oriented checks after releases to keep quality stable under fast delivery cycles.",
+          "Data-informed prioritization of improvements by effort vs user impact."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "frontend-a11y",
+    "label": "Frontend & A11y",
+    "items": [
+      "WCAG | ARIA",
+      "Semantic HTML | SEO",
+      "Keyboard & Focus",
+      "Accessible Components"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "data": "Accessibility is part of frontend implementation from the first iteration, not a final QA checklist."
+      },
+      {
+        "type": "h4",
         "data": "Accessibility Implementation"
       },
       {
@@ -102,14 +171,14 @@
       },
       {
         "type": "h4",
-        "data": "Measurement & Validation"
+        "data": "Semantic Frontend & SEO"
       },
       {
         "type": "list",
         "data": [
-          "Continuous validation with Lighthouse and field signals from Chrome UX Report.",
-          "Regression-oriented checks after releases to keep quality stable under fast delivery cycles.",
-          "Data-informed prioritization of improvements by effort vs user impact."
+          "Semantic HTML implementation for maintainable, scalable storefront markup.",
+          "Technical SEO support through robust structure, metadata, and crawl-friendly templates.",
+          "Frontend decisions guided by readability, accessibility, and discoverability."
         ]
       }
     ]
@@ -134,47 +203,6 @@
           "API and webhook integrations across storefront and business workflows.",
           "GA4 migration and e-commerce event quality validation.",
           "Subscription/bundle flow adjustments in collaboration with product and business needs."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "frontend-engineering",
-    "label": "Frontend Engineering",
-    "items": [
-      "TypeScript | React",
-      "Remix | Next.js",
-      "Tailwind | CSS Modules",
-      "Semantic HTML | SEO"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "data": "Across enterprise Shopify engagements, I have consistently worked on conversion-critical surfaces (PDP, cart, listing, navigation), balancing release speed with quality and maintainability."
-      },
-      {
-        "type": "h4",
-        "data": "Frameworks & Delivery"
-      },
-      {
-        "type": "list",
-        "data": [
-          "React + TypeScript implementation patterns for scalable storefront features.",
-          "Remix and Next.js usage in headless and content-driven scenarios.",
-          "Tailwind CSS adoption for fast, maintainable UI delivery.",
-          "Feature delivery cycles for high-change e-commerce environments."
-        ]
-      },
-      {
-        "type": "h4",
-        "data": "Frontend Quality & SEO"
-      },
-      {
-        "type": "list",
-        "data": [
-          "Semantic HTML implementation for maintainable, scalable storefront markup.",
-          "Technical SEO support through robust structure, metadata, and crawl-friendly templates.",
-          "Styling workflows using Tailwind CSS and CSS Modules when project context requires."
         ]
       }
     ]
