@@ -586,11 +586,24 @@ main {
     max-width: none;
     margin: 24px;
     color: var(--white);
+    max-height: calc(100dvh - 48px);
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  dialog::-webkit-scrollbar {
+    display: none;
   }
 
   dialog::backdrop {
     background: transparent;
     backdrop-filter: blur(12px);
+  }
+
+  body.dialog-open {
+    overflow: hidden;
   }
 
   .label button {
@@ -1690,11 +1703,18 @@ main {
           const closeBtn = dialog.querySelector('.close');
 
           card.addEventListener('click', () => {
-            if ('showModal' in dialog) dialog.showModal();
+            if ('showModal' in dialog) {
+              dialog.showModal();
+              document.body.classList.add('dialog-open');
+            }
           });
 
           closeBtn && closeBtn.addEventListener('click', () => {
             dialog.close();
+          });
+
+          dialog.addEventListener('close', () => {
+            document.body.classList.remove('dialog-open');
           });
         });
       });

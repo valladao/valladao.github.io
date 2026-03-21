@@ -576,11 +576,24 @@ main {
     max-width: none;
     margin: 24px;
     color: var(--white);
+    max-height: calc(100dvh - 48px);
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  dialog::-webkit-scrollbar {
+    display: none;
   }
 
   dialog::backdrop {
     background: transparent;
     backdrop-filter: blur(12px);
+  }
+
+  body.dialog-open {
+    overflow: hidden;
   }
 
   .label button {

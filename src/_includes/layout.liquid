@@ -69,11 +69,18 @@
           const closeBtn = dialog.querySelector('.close');
 
           card.addEventListener('click', () => {
-            if ('showModal' in dialog) dialog.showModal();
+            if ('showModal' in dialog) {
+              dialog.showModal();
+              document.body.classList.add('dialog-open');
+            }
           });
 
           closeBtn && closeBtn.addEventListener('click', () => {
             dialog.close();
+          });
+
+          dialog.addEventListener('close', () => {
+            document.body.classList.remove('dialog-open');
           });
         });
       });
