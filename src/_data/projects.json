@@ -19,6 +19,12 @@
         "data": "The scope combined fast feature delivery with production hardening across conversion-critical surfaces, especially for mobile traffic and recurring merchandising updates."
       },
       {
+        "type": "media",
+        "mediaType": "image",
+        "src": "/assets/image-grid.webp",
+        "alt": "Native Cos storefront grid view"
+      },
+      {
         "type": "h4",
         "data": "Build-to-Launch Delivery"
       },

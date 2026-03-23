@@ -20,6 +20,16 @@
               {% endfor %}
             </ul>
           {% endif %}
+          {% if section.type == "media" %}
+            <div class="dialog-media">
+              {% if section.mediaType == "image" %}
+                <img src="{{ section.src }}" alt="{{ section.alt }}">
+              {% endif %}
+              {% if section.mediaType == "video" %}
+                <video src="{{ section.src }}" controls playsinline></video>
+              {% endif %}
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
       <div class="label">
