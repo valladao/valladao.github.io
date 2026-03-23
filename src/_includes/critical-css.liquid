@@ -596,9 +596,25 @@ main {
     overflow: hidden;
   }
 
-  .label button {
+  .label form,
+  .label button,
+  .close {
+    margin: 0;
+    padding: 0;
     background: transparent;
     border: none;
+    border-radius: 0;
+    box-shadow: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .close:focus,
+  .close:focus-visible,
+  .close:active {
+    outline: none;
+    box-shadow: none;
   }
 
   .dialog {
