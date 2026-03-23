@@ -5,7 +5,9 @@
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>{{ dialog.label }}</h2>
-        <h3>{{ dialog.jobPosition }}</h3>
+        {% if dialog.jobPosition %}
+          <h3>{{ dialog.jobPosition }}</h3>
+        {% endif %}
         {% for section in dialog.content %}
           {% if section.type == "h4" %}
             <h4>{{ section.data }}</h4>

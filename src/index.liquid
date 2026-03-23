@@ -16,7 +16,7 @@ title: Manoel Valladao | Senior Shopify Web Developer
     <h3>E-commerce | Frontend | Web Performance | A11y</h3>
     <p>We can build fast, accessible and scalable e-commerce experiences</p>
   </section>
-  {% render 'about' %}
+  {% render 'about', about: about %}
   <section id="skills" class="cards-section">
     <h2>Skills</h2>
     {% render 'cards', cards: skills %}
@@ -27,5 +27,6 @@ title: Manoel Valladao | Senior Shopify Web Developer
   </section>
 </main>
 
+{% render 'dialog', dialogs: about %}
 {% render 'dialog', dialogs: skills %}
 {% render 'dialog', dialogs: projects %}

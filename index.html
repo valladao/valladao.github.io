@@ -777,16 +777,22 @@ main {
     <h3>E-commerce | Frontend | Web Performance | A11y</h3>
     <p>We can build fast, accessible and scalable e-commerce experiences</p>
   </section>
-  <section id="about">
+  
+<section id="about">
   <h2>About</h2>
-  <p>
-    Working with Shopify since 2009, I help brands create faster, more
-    accessible, and scalable e-commerce experiences, combining deep
-    technical skills with a strong focus on Web Performance and A11y best
-    practices.
-  </p>
-  <p>When I'm not coding, I like making expresso and playing Tennis.</p>
-  <div class="link"><span>+ </span><a href="#">Know more</a></div>
+  
+    
+      <p>Working with Shopify since 2009, I help brands create faster, more accessible, and scalable e-commerce experiences, combining deep technical skills with a strong focus on Web Performance and A11y best practices.</p>
+    
+  
+    
+      <p>When I'm not coding, I like making expresso and playing Tennis.</p>
+    
+  
+  <div class="link">
+    <span>+ </span>
+    <a href="#" data-dialog-id="about">Know more</a>
+  </div>
 </section>
 
   <section id="skills" class="cards-section">
@@ -1056,11 +1062,49 @@ main {
 </main>
 
 
+  <dialog class="dialog" id="dialog-about">
+    <div class="tech-border">
+      <div class="tech-border-internal">
+        <h2>About</h2>
+        
+        
+          
+          
+            <p>Working with Shopify since 2009, I help brands create faster, more accessible, and scalable e-commerce experiences, combining deep technical skills with a strong focus on Web Performance and A11y best practices.</p>
+          
+          
+          
+        
+          
+          
+            <p>My work is centered on building maintainable storefront systems that support growth without sacrificing speed, clarity, or accessibility.</p>
+          
+          
+          
+        
+          
+          
+            <p>When I'm not coding, I like making expresso and playing Tennis.</p>
+          
+          
+          
+        
+      </div>
+      <div class="label">
+          <form method="dialog">
+            <button class="close"><h3>X</h3></button>
+          </form>
+      </div>
+    </div>
+  </dialog>
+
+
+
   <dialog class="dialog" id="dialog-shopify-platform">
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Shopify Platform</h2>
-        <h3></h3>
+        
         
           
           
@@ -1155,7 +1199,7 @@ main {
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Web Developer</h2>
-        <h3></h3>
+        
         
           
           
@@ -1223,7 +1267,7 @@ main {
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Web Performance</h2>
-        <h3></h3>
+        
         
           
           
@@ -1298,7 +1342,7 @@ main {
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Frontend & A11y</h2>
-        <h3></h3>
+        
         
           
           
@@ -1364,7 +1408,7 @@ main {
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Integrations & Analytics</h2>
-        <h3></h3>
+        
         
           
           
@@ -1403,7 +1447,9 @@ main {
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Native Cos</h2>
-        <h3>Senior Shopify Web Developer</h3>
+        
+          <h3>Senior Shopify Web Developer</h3>
+        
         
           
           
@@ -1512,7 +1558,9 @@ main {
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Decathlon USA</h2>
-        <h3>Senior Shopify Web Developer</h3>
+        
+          <h3>Senior Shopify Web Developer</h3>
+        
         
           
           
@@ -1607,7 +1655,9 @@ main {
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Van Rysel Cycling</h2>
-        <h3>Shopify Web Developer</h3>
+        
+          <h3>Shopify Web Developer</h3>
+        
         
           
           
@@ -1644,7 +1694,9 @@ main {
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>TerraCotta Arte Sacra</h2>
-        <h3>Full Stack Web Developer</h3>
+        
+          <h3>Full Stack Web Developer</h3>
+        
         
           
           
@@ -1739,7 +1791,7 @@ main {
     <div class="tech-border">
       <div class="tech-border-internal">
         <h2>Pedro H Valladao</h2>
-        <h3></h3>
+        
         
           
           
@@ -1790,18 +1842,20 @@ main {
           },
         });
 
-        /** @type {NodeListOf<HTMLDivElement>} */
-        const cards = document.querySelectorAll('.js-card');
+        /** @type {NodeListOf<HTMLElement>} */
+        const dialogTriggers = document.querySelectorAll('[data-dialog-id]');
 
-        cards.forEach((card) => {
-          const dialogId = card.dataset.dialogId;
+        dialogTriggers.forEach((trigger) => {
+          const dialogId = trigger.dataset.dialogId;
           if (!dialogId) return;
           const dialog = document.getElementById(`dialog-${dialogId}`);
           if (!dialog) return;
 
           const closeBtn = dialog.querySelector('.close');
 
-          card.addEventListener('click', () => {
+          trigger.addEventListener('click', (event) => {
+            if (trigger.tagName === 'A') event.preventDefault();
+
             if ('showModal' in dialog) {
               dialog.showModal();
               document.body.classList.add('dialog-open');

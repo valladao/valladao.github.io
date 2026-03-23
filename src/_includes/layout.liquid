@@ -57,18 +57,20 @@
           },
         });
 
-        /** @type {NodeListOf<HTMLDivElement>} */
-        const cards = document.querySelectorAll('.js-card');
+        /** @type {NodeListOf<HTMLElement>} */
+        const dialogTriggers = document.querySelectorAll('[data-dialog-id]');
 
-        cards.forEach((card) => {
-          const dialogId = card.dataset.dialogId;
+        dialogTriggers.forEach((trigger) => {
+          const dialogId = trigger.dataset.dialogId;
           if (!dialogId) return;
           const dialog = document.getElementById(`dialog-${dialogId}`);
           if (!dialog) return;
 
           const closeBtn = dialog.querySelector('.close');
 
-          card.addEventListener('click', () => {
+          trigger.addEventListener('click', (event) => {
+            if (trigger.tagName === 'A') event.preventDefault();
+
             if ('showModal' in dialog) {
               dialog.showModal();
               document.body.classList.add('dialog-open');

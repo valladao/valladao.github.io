@@ -1,0 +1,30 @@
+[
+  {
+    "id": "about",
+    "label": "About",
+    "summary": [
+      {
+        "type": "p",
+        "data": "Working with Shopify since 2009, I help brands create faster, more accessible, and scalable e-commerce experiences, combining deep technical skills with a strong focus on Web Performance and A11y best practices."
+      },
+      {
+        "type": "p",
+        "data": "When I'm not coding, I like making expresso and playing Tennis."
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "data": "Working with Shopify since 2009, I help brands create faster, more accessible, and scalable e-commerce experiences, combining deep technical skills with a strong focus on Web Performance and A11y best practices."
+      },
+      {
+        "type": "p",
+        "data": "My work is centered on building maintainable storefront systems that support growth without sacrificing speed, clarity, or accessibility."
+      },
+      {
+        "type": "p",
+        "data": "When I'm not coding, I like making expresso and playing Tennis."
+      }
+    ]
+  }
+]
